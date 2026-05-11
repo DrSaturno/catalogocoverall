@@ -5,7 +5,9 @@
     "category": "CRYSTAL",
     "costo_m2": 6.11,
     "img": "images/crystal_jateado.jpg",
-    "precio_ars": 13000
+    "precio_ars": 13000,
+    "display_name": "Crystal Esmerilado",
+    "subtitle": "Luz difusa para ambientes de autor"
   },
   {
     "id": "crystal_quadra",
@@ -13,7 +15,9 @@
     "category": "CRYSTAL",
     "costo_m2": 7.42,
     "img": "images/crystal_quadra.jpg",
-    "precio_ars": 16000
+    "precio_ars": 16000,
+    "display_name": "Crystal Cuadros",
+    "subtitle": "Geometría sutil de inspiración contemporánea"
   },
   {
     "id": "crystal_condessa",
@@ -21,7 +25,9 @@
     "category": "CRYSTAL",
     "costo_m2": 7.42,
     "img": "images/crystal_condessa.jpg",
-    "precio_ars": 16000
+    "precio_ars": 16000,
+    "display_name": "Crystal Condesa",
+    "subtitle": "Transparencia elegante de origen europeo"
   },
   {
     "id": "crystal_carbonium",
@@ -29,7 +35,9 @@
     "category": "CRYSTAL",
     "costo_m2": 7.42,
     "img": "images/crystal_carbonium.jpg",
-    "precio_ars": 16000
+    "precio_ars": 16000,
+    "display_name": "Crystal Carbonio",
+    "subtitle": "Oscuridad sofisticada para espacios únicos"
   },
   {
     "id": "crystal_krusher",
@@ -37,7 +45,9 @@
     "category": "CRYSTAL",
     "costo_m2": 7.42,
     "img": "images/crystal_krusher.jpg",
-    "precio_ars": 16000
+    "precio_ars": 16000,
+    "display_name": "Crystal Krusher",
+    "subtitle": "Textura vibrante con impacto visual"
   },
   {
     "id": "crystal_rave",
@@ -45,7 +55,9 @@
     "category": "CRYSTAL",
     "costo_m2": 7.42,
     "img": "images/crystal_rave.jpg",
-    "precio_ars": 16000
+    "precio_ars": 16000,
+    "display_name": "Crystal Rave",
+    "subtitle": "Dinamismo contenido para superficies con carácter"
   },
   {
     "id": "crystal_tropical",
@@ -53,7 +65,9 @@
     "category": "CRYSTAL",
     "costo_m2": 8.84,
     "img": "images/crystal_tropical.jpg",
-    "precio_ars": 19000
+    "precio_ars": 19000,
+    "display_name": "Crystal Jardín Tropical",
+    "subtitle": "Naturaleza premium para espacios que sorprenden"
   },
   {
     "id": "wood_burl",
@@ -61,7 +75,9 @@
     "category": "WOOD",
     "costo_m2": 15.9,
     "img": "images/wood_burl.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Burl",
+    "subtitle": "Veta única de raíz, para espacios irrepetibles"
   },
   {
     "id": "wood_capuccino",
@@ -69,7 +85,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_capuccino.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Roble Capuccino",
+    "subtitle": "Calidez profunda en tonos terrosos"
   },
   {
     "id": "wood_inovata",
@@ -77,7 +95,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_inovata.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Roble Inovata",
+    "subtitle": "Roble contemporáneo de acabado satinado"
   },
   {
     "id": "wood_verona",
@@ -85,7 +105,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_verona.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Roble Verona",
+    "subtitle": "Inspiración italiana en cada línea"
   },
   {
     "id": "wood_sevilla",
@@ -93,7 +115,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_sevilla.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Demolición Sevilla",
+    "subtitle": "Historia y textura para interiores con alma"
   },
   {
     "id": "wood_salamanca",
@@ -101,7 +125,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_salamanca.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Rústica Salamanca",
+    "subtitle": "Lo artesanal elevado a premium"
   },
   {
     "id": "wood_cadiz",
@@ -109,7 +135,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_cadiz.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Rústica Cádiz",
+    "subtitle": "Carácter mediterráneo con sofisticación"
   },
   {
     "id": "wood_barcelona",
@@ -117,7 +145,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_barcelona.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Demolición Barcelona",
+    "subtitle": "Madera con memoria para espacios únicos"
   },
   {
     "id": "wood_pamplona",
@@ -125,7 +155,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_pamplona.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Roble Pamplona",
+    "subtitle": "Elegancia nórdica con raíces ibéricas"
   },
   {
     "id": "wood_tenerife",
@@ -133,7 +165,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_tenerife.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Roble Tenerife",
+    "subtitle": "Veteado natural de acabado superior"
   },
   {
     "id": "wood_vigo",
@@ -141,7 +175,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_vigo.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Listones Vigo",
+    "subtitle": "Ritmo vertical para espacios modernos"
   },
   {
     "id": "wood_lugo",
@@ -149,7 +185,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_lugo.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Listones Lugo",
+    "subtitle": "Textura cálida para espacios contemporáneos"
   },
   {
     "id": "wood_burgo",
@@ -157,7 +195,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_burgo.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Listones Burgo",
+    "subtitle": "Ritmo y calidez en madera de alto diseño"
   },
   {
     "id": "wood_galicia",
@@ -165,7 +205,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_galicia.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Fresno Galicia",
+    "subtitle": "Veta fina y luminosa, elegancia natural"
   },
   {
     "id": "wood_asturias",
@@ -173,7 +215,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_asturias.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Fresno Asturias",
+    "subtitle": "Claridad y calidez del bosque atlántico"
   },
   {
     "id": "wood_toledo",
@@ -181,7 +225,9 @@
     "category": "WOOD",
     "costo_m2": 15.57,
     "img": "images/wood_toledo.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Fresno Toledo",
+    "subtitle": "Madera premium de acabado refinado"
   },
   {
     "id": "lisboa",
@@ -189,7 +235,9 @@
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
     "img": "images/lisboa.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Lisboa",
+    "subtitle": "Azulejo reinterpretado en clave contemporánea"
   },
   {
     "id": "porto",
@@ -197,7 +245,9 @@
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
     "img": "images/porto.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Porto",
+    "subtitle": "Geometría portuguesa de inspiración atemporal"
   },
   {
     "id": "metro_matte",
@@ -205,7 +255,9 @@
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
     "img": "images/metro_matte.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Metro Blanco Mate",
+    "subtitle": "Pureza clásica para ambientes sin tiempo"
   },
   {
     "id": "metro_gloss",
@@ -213,7 +265,9 @@
     "category": "ESTAMPADOS",
     "costo_m2": 15.9,
     "img": "images/metro_gloss.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Metro Blanco Brillante",
+    "subtitle": "Reflexión luminosa para cocinas de diseño"
   },
   {
     "id": "rhapsody",
@@ -221,7 +275,9 @@
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
     "img": "images/rhapsody.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Rhapsody",
+    "subtitle": "Movimiento abstracto para paredes con carácter"
   },
   {
     "id": "jardim_vertical",
@@ -229,7 +285,9 @@
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
     "img": "images/jardim_vertical.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Jardín Vertical",
+    "subtitle": "Naturaleza vertical para interiores que respiran"
   },
   {
     "id": "jardim_tropical",
@@ -237,7 +295,9 @@
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
     "img": "images/jardim_tropical.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Jardín Tropical",
+    "subtitle": "Exuberancia contenida para espacios con vida"
   },
   {
     "id": "brick_white",
@@ -245,7 +305,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/brick_white.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Ladrillo Blanco",
+    "subtitle": "Industrial refinado para espacios urbanos"
   },
   {
     "id": "brick_red",
@@ -253,7 +315,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/brick_red.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Ladrillo Rojo",
+    "subtitle": "Calidez raw para interiores con carácter"
   },
   {
     "id": "brick_black",
@@ -261,7 +325,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/brick_black.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Ladrillo Negro",
+    "subtitle": "Oscuridad sofisticada de inspiración loft"
   },
   {
     "id": "brick_london",
@@ -269,7 +335,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/brick_london.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Ladrillo London",
+    "subtitle": "Elegancia británica para ambientes con historia"
   },
   {
     "id": "concrete",
@@ -277,7 +345,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/concrete.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Concreto",
+    "subtitle": "Pureza gris para el minimalismo moderno"
   },
   {
     "id": "marble_nero",
@@ -285,7 +355,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.9,
     "img": "images/marble_nero.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Nero",
+    "subtitle": "Oscuridad total. Lujo absoluto"
   },
   {
     "id": "marble_bianco",
@@ -293,7 +365,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.9,
     "img": "images/marble_bianco.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Bianco",
+    "subtitle": "Pureza del mármol clásico de Carrara"
   },
   {
     "id": "marble_lunare_matte",
@@ -301,7 +375,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/marble_lunare_matte.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Lunar Mate",
+    "subtitle": "Suavidad lunar para espacios contemplativos"
   },
   {
     "id": "marble_lunare_gloss",
@@ -309,7 +385,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.9,
     "img": "images/marble_lunare_gloss.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Lunar Brillante",
+    "subtitle": "Reflejo suave de luz indirecta"
   },
   {
     "id": "marble_marquina_gloss",
@@ -317,7 +395,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.9,
     "img": "images/marble_marquina_gloss.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Marquina Brillante",
+    "subtitle": "Negro intenso con veta blanca. Lujo total"
   },
   {
     "id": "marble_marquina_matte",
@@ -325,7 +405,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/marble_marquina_matte.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Marquina Mate",
+    "subtitle": "Opulencia oscura en acabado mate"
   },
   {
     "id": "marble_calacatta_gloss",
@@ -333,7 +415,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.9,
     "img": "images/marble_calacatta_gloss.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Calacatta Oro Brillante",
+    "subtitle": "El rey del mármol italiano en su máximo esplendor"
   },
   {
     "id": "marble_calacatta_matte",
@@ -341,7 +425,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/marble_calacatta_matte.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Calacatta Oro Mate",
+    "subtitle": "Calacatta en versión mate. Lujo contenido"
   },
   {
     "id": "marble_crema_gloss",
@@ -349,7 +435,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.9,
     "img": "images/marble_crema_gloss.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Crema Marfil Brillante",
+    "subtitle": "Calidez mediterránea en tono marfil"
   },
   {
     "id": "marble_crema_matte",
@@ -357,7 +445,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/marble_crema_matte.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Crema Marfil Mate",
+    "subtitle": "Sutileza crema para ambientes serenos"
   },
   {
     "id": "marble_grigio_gloss",
@@ -365,7 +455,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.9,
     "img": "images/marble_grigio_gloss.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Grigio Brillante",
+    "subtitle": "Gris arquitectónico con profundidad"
   },
   {
     "id": "marble_grigio_matte",
@@ -373,7 +465,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/marble_grigio_matte.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Grigio Mate",
+    "subtitle": "Minimalismo gris de diseño contemporáneo"
   },
   {
     "id": "marble_tivoli",
@@ -381,7 +475,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/marble_tivoli.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Tivoli",
+    "subtitle": "Veladuras suaves del mármol clásico italiano"
   },
   {
     "id": "lombarda_cenere_gloss",
@@ -389,7 +485,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.9,
     "img": "images/lombarda_cenere_gloss.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Lombarda Ceniza Brillante",
+    "subtitle": "Ceniza viva para superficies con presencia"
   },
   {
     "id": "lombarda_cenere_matte",
@@ -397,7 +495,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/lombarda_cenere_matte.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Lombarda Ceniza Mate",
+    "subtitle": "Elegancia gris en acabado mate absoluto"
   },
   {
     "id": "lombarda_sabbia_gloss",
@@ -405,7 +505,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.9,
     "img": "images/lombarda_sabbia_gloss.jpg",
-    "precio_ars": 35000
+    "precio_ars": 35000,
+    "display_name": "Lombarda Arena Brillante",
+    "subtitle": "Calidez de arena con brillo contenido"
   },
   {
     "id": "lombarda_sabbia_matte",
@@ -413,7 +515,9 @@
     "category": "PEDRAS",
     "costo_m2": 15.57,
     "img": "images/lombarda_sabbia_matte.jpg",
-    "precio_ars": 34000
+    "precio_ars": 34000,
+    "display_name": "Lombarda Arena Mate",
+    "subtitle": "Textura cálida para espacios sin tiempo"
   },
   {
     "id": "tramatto_beige",
@@ -421,7 +525,9 @@
     "category": "PEDRAS",
     "costo_m2": 17.94,
     "img": "images/tramatto_beige.jpg",
-    "precio_ars": 40000
+    "precio_ars": 40000,
+    "display_name": "Tramatto Beige",
+    "subtitle": "Travertino reinterpretado para el presente"
   },
   {
     "id": "tramatto_gris",
@@ -429,7 +535,9 @@
     "category": "PEDRAS",
     "costo_m2": 17.94,
     "img": "images/tramatto_gris.jpg",
-    "precio_ars": 40000
+    "precio_ars": 40000,
+    "display_name": "Tramatto Gris",
+    "subtitle": "Piedra contemporánea para espacios de diseño"
   },
   {
     "id": "deck_valencia",
@@ -437,7 +545,9 @@
     "category": "PISOTAK",
     "costo_m2": 17.42,
     "img": "images/deck_valencia.jpg",
-    "precio_ars": 38000
+    "precio_ars": 38000,
+    "display_name": "Deck Valencia",
+    "subtitle": "Madera exterior premium para terrazas de autor"
   },
   {
     "id": "deck_madri",
@@ -445,7 +555,9 @@
     "category": "PISOTAK",
     "costo_m2": 17.42,
     "img": "images/deck_madri.jpg",
-    "precio_ars": 38000
+    "precio_ars": 38000,
+    "display_name": "Deck Madrid",
+    "subtitle": "Suelo de diseño para espacios al aire libre"
   },
   {
     "id": "kroma_avila",
@@ -453,7 +565,9 @@
     "category": "KROMA",
     "costo_m2": 14.32,
     "img": "images/kroma_avila.jpg",
-    "precio_ars": 32000
+    "precio_ars": 32000,
+    "display_name": "Kroma Ávila",
+    "subtitle": "Roble estructurado para espacios cálidos"
   },
   {
     "id": "kroma_lerida",
@@ -461,7 +575,9 @@
     "category": "KROMA",
     "costo_m2": 14.32,
     "img": "images/kroma_lerida.jpg",
-    "precio_ars": 32000
+    "precio_ars": 32000,
+    "display_name": "Kroma Lérida",
+    "subtitle": "Madera fina para interiores de diseño"
   },
   {
     "id": "kroma_segovia",
@@ -469,7 +585,9 @@
     "category": "KROMA",
     "costo_m2": 14.32,
     "img": "images/kroma_segovia.jpg",
-    "precio_ars": 32000
+    "precio_ars": 32000,
+    "display_name": "Kroma Segovia",
+    "subtitle": "Calidez castellana en superficie premium"
   },
   {
     "id": "kroma_bilbao",
@@ -477,7 +595,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_bilbao.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Kroma Bilbao",
+    "subtitle": "Vanguardia vasca en acabado contemporáneo"
   },
   {
     "id": "kroma_teruel",
@@ -485,7 +605,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_teruel.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Kroma Teruel",
+    "subtitle": "Textura terrosa para espacios con carácter"
   },
   {
     "id": "kroma_branco_artico",
@@ -493,7 +615,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_branco_artico.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Blanco Ártico",
+    "subtitle": "Pureza polar para interiores luminosos"
   },
   {
     "id": "kroma_cinza_fossil",
@@ -501,7 +625,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_cinza_fossil.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Gris Fossil",
+    "subtitle": "Gris orgánico para ambientes modernos"
   },
   {
     "id": "kroma_preto_absoluto",
@@ -509,7 +635,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_preto_absoluto.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Negro Absoluto",
+    "subtitle": "Oscuridad total para espacios de impacto"
   },
   {
     "id": "kroma_argento",
@@ -517,7 +645,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_argento.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Plateado",
+    "subtitle": "Metálico sutil para superficies contemporáneas"
   },
   {
     "id": "kroma_azul_petroleo",
@@ -525,7 +655,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_azul_petroleo.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Azul Petróleo",
+    "subtitle": "Profundidad oceánica para espacios únicos"
   },
   {
     "id": "kroma_verde_primavera",
@@ -533,7 +665,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_verde_primavera.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Verde Primavera",
+    "subtitle": "Naturaleza viva en acabado premium"
   },
   {
     "id": "kroma_grafite",
@@ -541,7 +675,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_grafite.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Grafito",
+    "subtitle": "Oscuridad urbana para diseño contemporáneo"
   },
   {
     "id": "kroma_aveia",
@@ -549,7 +685,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_aveia.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Avena",
+    "subtitle": "Neutralidad cálida para espacios serenos"
   },
   {
     "id": "kroma_fendi",
@@ -557,7 +695,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_fendi.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Fendi",
+    "subtitle": "Elegancia italiana en tono arena oscuro"
   },
   {
     "id": "kroma_gamboge",
@@ -565,7 +705,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_gamboge.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Gamboge",
+    "subtitle": "Ocre vibrante para espacios con personalidad"
   },
   {
     "id": "kroma_olaria",
@@ -573,7 +715,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_olaria.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Alfarería",
+    "subtitle": "Tierra cocida para interiores con historia"
   },
   {
     "id": "kroma_merlot",
@@ -581,7 +725,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_merlot.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Merlot",
+    "subtitle": "Intensidad vinícola para superficies audaces"
   },
   {
     "id": "kroma_verde_oliva",
@@ -589,7 +735,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_verde_oliva.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Verde Oliva",
+    "subtitle": "Verde mediterráneo de sofisticación natural"
   },
   {
     "id": "kroma_falesia",
@@ -597,7 +745,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_falesia.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Acantilado",
+    "subtitle": "Terracota suave del litoral atlántico"
   },
   {
     "id": "kroma_avorio",
@@ -605,7 +755,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_avorio.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Marfil",
+    "subtitle": "Tono marfil atemporal para ambientes serenos"
   },
   {
     "id": "kroma_rattan",
@@ -613,7 +765,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_rattan.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Ratán Off White",
+    "subtitle": "Textura artesanal en tono crema natural"
   },
   {
     "id": "kroma_cuoro",
@@ -621,7 +775,9 @@
     "category": "KROMA",
     "costo_m2": 13.23,
     "img": "images/kroma_cuoro.jpg",
-    "precio_ars": 29000
+    "precio_ars": 29000,
+    "display_name": "Cuero Off White",
+    "subtitle": "Piel sutil en versión minimalista y luminosa"
   },
   {
     "id": "kroma_malbec",
@@ -629,6 +785,8 @@
     "category": "KROMA",
     "costo_m2": 14.69,
     "img": "images/kroma_malbec.jpg",
-    "precio_ars": 32000
+    "precio_ars": 32000,
+    "display_name": "Malbec",
+    "subtitle": "Vino oscuro para espacios de carácter propio"
   }
 ]

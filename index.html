@@ -3,322 +3,517 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CoverAll Deco — Catálogo de Revestimientos</title>
+<title>CoverAll Deco — Colección de Revestimientos</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-  :root {
-    --bg: #0a0a0a;
-    --surface: #141414;
-    --surface2: #1c1c1c;
-    --border: #2a2a2a;
-    --gold: #FFD200;
-    --gold-light: #FFE14D;
-    --text: #f0ede8;
-    --text-muted: #888;
-    --radius: 12px;
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
-  }
+:root {
+  --bg:        #0c0b09;
+  --surface:   #131110;
+  --surface2:  #1a1815;
+  --border:    #252220;
+  --border2:   #2e2b27;
+  --gold:      #FFD200;
+  --cream:     #e8e0d3;
+  --cream2:    #c8bcaa;
+  --muted:     #6e6860;
+  --muted2:    #4a4540;
+  --text:      #f0ede8;
+  --r:         4px;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-ui:      'Outfit', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --ease-premium: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
 
-  body {
-    font-family: var(--font-body);
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-  }
+html { scroll-behavior: smooth; }
 
-  /* HEADER */
-  header {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(12px);
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  .logo-img {
-    height: 40px;
-    width: auto;
-    display: block;
-  }
-  .tagline {
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 400;
-  }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
 
-  /* HERO */
-  .hero {
-    text-align: center;
-    padding: 70px 40px 50px;
-    background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
-    border-bottom: 1px solid var(--border);
-  }
-  .hero h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 800;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    line-height: 1.1;
-  }
-  .hero h2 span { color: var(--gold); }
-  .hero p {
-    font-family: var(--font-body);
-    color: var(--text-muted);
-    font-size: 1rem;
-    font-weight: 300;
-    max-width: 520px;
-    margin: 0 auto 36px;
-    line-height: 1.7;
-  }
-  .stats {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .stat { text-align: center; }
-  .stat-num {
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    font-weight: 600;
-    color: var(--gold);
-    display: block;
-    line-height: 1;
-  }
-  .stat-label {
-    font-family: var(--font-body);
-    font-size: 0.68rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    margin-top: 4px;
-    display: block;
-  }
+/* ─── HEADER ─────────────────────────────────── */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 72px;
+  background: rgba(12,11,9,.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255,255,255,.04);
+  transition: background .4s var(--ease-premium);
+}
+.logo-img { height: 36px; width: auto; display: block; }
+.header-tagline {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
 
-  /* CONTROLS */
+/* ─── HERO ────────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 100svh;
+  min-height: 600px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: -5%;
+  background-image: url('https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1920&q=85');
+  background-size: cover;
+  background-position: center 30%;
+  animation: kenBurns 18s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+@keyframes kenBurns {
+  from { transform: scale(1.05) translate(0, 0); }
+  to   { transform: scale(1.0)  translate(-1%, 1%); }
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    170deg,
+    rgba(12,11,9,.15) 0%,
+    rgba(12,11,9,.4)  40%,
+    rgba(12,11,9,.82) 75%,
+    rgba(12,11,9,.97) 100%
+  );
+}
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  opacity: .035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding: 0 48px 72px;
+  max-width: 760px;
+  animation: fadeUp .9s var(--ease-premium) .2s both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--cream2);
+}
+.hero-sub {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--cream2);
+  line-height: 1.75;
+  margin-bottom: 40px;
+  max-width: 420px;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--gold);
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: var(--r);
+  transition: background .25s, transform .25s;
+}
+.hero-cta:hover { background: var(--cream); transform: translateY(-2px); }
+.hero-scroll {
+  position: absolute;
+  bottom: 32px;
+  right: 48px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  animation: fadeUp 1s var(--ease-premium) .6s both;
+}
+.hero-scroll span { writing-mode: vertical-rl; }
+.hero-scroll::after {
+  content: '';
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--muted), transparent);
+}
+
+/* ─── INTRO ───────────────────────────────────── */
+.intro {
+  padding: 80px 48px;
+  max-width: 640px;
+  animation: fadeUp .7s var(--ease-premium) both;
+}
+.intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.intro h2 em { font-style: italic; color: var(--cream2); }
+.intro p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+/* ─── CONTROLS ────────────────────────────────── */
+.controls {
+  position: sticky;
+  top: 72px;
+  z-index: 100;
+  background: rgba(12,11,9,.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 48px;
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  min-height: 56px;
+}
+.search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--border);
+  padding-right: 24px;
+  margin-right: 24px;
+  min-width: 240px;
+}
+.search-wrap input {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  outline: none;
+  width: 100%;
+  padding: 0 0 0 28px;
+}
+.search-wrap input::placeholder { color: var(--muted2); }
+.search-icon {
+  position: absolute;
+  left: 0;
+  color: var(--muted2);
+  font-size: 0.95rem;
+}
+.filters {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
+.filter-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all .2s var(--ease-premium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.filter-btn:hover { color: var(--text); border-color: var(--border2); }
+.filter-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #000;
+  font-weight: 600;
+}
+.results-count {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: var(--muted2);
+  white-space: nowrap;
+  letter-spacing: 0.06em;
+}
+.results-count span { color: var(--cream2); font-weight: 500; margin: 0 4px; }
+
+/* ─── GRID ────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  padding-bottom: 0;
+}
+
+/* ─── CARD ────────────────────────────────────── */
+.card {
+  position: relative;
+  background: var(--bg);
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 3/4;
+}
+.card.hidden { display: none; }
+
+.card-img {
+  position: absolute;
+  inset: 0;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .8s var(--ease-premium);
+  display: block;
+}
+.card:hover .card-img img { transform: scale(1.06); }
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(12,11,9,.92) 0%,
+    rgba(12,11,9,.5)  35%,
+    rgba(12,11,9,.1)  60%,
+    transparent       100%
+  );
+  transition: background .5s var(--ease-premium);
+}
+.card:hover .card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(12,11,9,.97) 0%,
+    rgba(12,11,9,.65) 45%,
+    rgba(12,11,9,.25) 75%,
+    transparent       100%
+  );
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 24px 24px;
+}
+.cat-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  opacity: .8;
+}
+.card-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  transition: color .3s;
+}
+.card-sub {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--cream2);
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .4s var(--ease-premium), transform .4s var(--ease-premium);
+  margin-bottom: 12px;
+}
+.card:hover .card-sub {
+  opacity: .75;
+  transform: translateY(0);
+}
+.card-price {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  transition: opacity .3s;
+}
+.card-price small {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 300;
+  color: var(--muted);
+  margin-left: 4px;
+}
+
+/* ─── EMPTY ───────────────────────────────────── */
+.empty {
+  display: none;
+  text-align: center;
+  padding: 100px 20px;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--muted);
+}
+.empty.show { display: block; }
+
+/* ─── FOOTER ──────────────────────────────────── */
+footer {
+  padding: 48px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-logo { height: 28px; opacity: .6; }
+.footer-text {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: var(--muted2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.footer-text a { color: var(--muted); text-decoration: none; }
+.footer-text a:hover { color: var(--gold); }
+
+/* ─── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 768px) {
+  header { padding: 0 20px; }
+  .header-tagline { display: none; }
+  .hero-content { padding: 0 20px 60px; }
+  .hero-scroll { display: none; }
+  .intro { padding: 56px 20px; }
   .controls {
-    padding: 24px 40px;
-    display: flex;
-    gap: 16px;
-    align-items: center;
+    padding: 0 16px;
     flex-wrap: wrap;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface);
+    gap: 0;
+    min-height: auto;
   }
   .search-wrap {
-    position: relative;
-    flex: 1;
-    min-width: 220px;
-    max-width: 360px;
-  }
-  .search-wrap input {
     width: 100%;
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 10px 16px 10px 40px;
-    border-radius: 8px;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    outline: none;
-    transition: border-color .2s;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    margin: 0;
+    min-width: unset;
   }
-  .search-wrap input:focus { border-color: var(--gold); }
-  .search-wrap input::placeholder { color: var(--text-muted); }
-  .search-icon {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-muted);
-    font-size: 1rem;
-    pointer-events: none;
-  }
-  .filters {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .filter-btn {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    padding: 8px 18px;
-    border-radius: 100px;
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all .2s;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-  .filter-btn:hover { border-color: var(--gold); color: var(--text); }
-  .filter-btn.active { background: var(--gold); border-color: var(--gold); color: #000; font-weight: 700; }
-
-  /* RESULTS BAR */
-  .results-bar {
-    padding: 14px 40px;
-    font-family: var(--font-body);
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
-  }
-  .results-bar span { color: var(--gold); font-weight: 600; }
-
-  /* GRID */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 20px;
-    padding: 20px 40px 60px;
-  }
-
-  /* CARD */
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-    transition: transform .25s, border-color .25s, box-shadow .25s;
-    cursor: default;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    border-color: var(--gold);
-    box-shadow: 0 12px 40px rgba(255,210,0,.10);
-  }
-  .card.hidden { display: none; }
-
-  .card-img {
-    position: relative;
-    aspect-ratio: 4/3;
-    overflow: hidden;
-    background: var(--surface2);
-  }
-  .card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .4s ease;
-  }
-  .card:hover .card-img img { transform: scale(1.05); }
-  .cat-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: rgba(10,10,10,.80);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255,210,0,.25);
-    color: var(--gold);
-    font-family: var(--font-body);
-    font-size: 0.62rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 4px 10px;
-    border-radius: 100px;
-    font-weight: 600;
-  }
-
-  .card-body { padding: 14px 16px 16px; }
-  .card-body h3 {
-    font-family: var(--font-heading);
-    font-size: 0.95rem;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    margin-bottom: 6px;
-    color: var(--text);
-    line-height: 1.3;
-  }
-  .price {
-    font-family: var(--font-heading);
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--gold);
-  }
-  .price span {
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
-
-  /* EMPTY STATE */
-  .empty {
-    display: none;
-    text-align: center;
-    padding: 80px 20px;
-    color: var(--text-muted);
-    font-family: var(--font-body);
-  }
-  .empty.show { display: block; }
-
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 30px 40px;
-    border-top: 1px solid var(--border);
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-  footer a { color: var(--gold); text-decoration: none; }
-
-  /* RESPONSIVE */
-  @media (max-width: 600px) {
-    header, .controls, .grid, .results-bar { padding-left: 16px; padding-right: 16px; }
-    .hero { padding: 40px 16px 32px; }
-    .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
-    .stats { gap: 24px; }
-    .tagline { display: none; }
-  }
+  .filters { padding: 10px 0; gap: 6px; }
+  .results-count { display: none; }
+  .grid { grid-template-columns: 1fr 1fr; }
+  .card { aspect-ratio: 3/5; }
+  .card-name { font-size: 1.05rem; }
+  footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
+  .card { aspect-ratio: 4/5; }
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">
-    <img src="logoamarillocompleto.png" alt="CoverAll Deco" class="logo-img">
-    <div class="tagline">Catálogo de Revestimientos</div>
-  </div>
+  <img src="logoamarillocompleto.png" alt="CoverAll Deco" class="logo-img">
+  <span class="header-tagline">Catálogo de Revestimientos</span>
 </header>
 
-<div class="hero">
-  <h2>Catálogo de <span>Revestimientos</span></h2>
-  <p>Descubrí nuestra colección completa de vinilos decorativos. Transformá cualquier espacio en un día, sin obra.</p>
-  <div class="stats">
-    <div class="stat"><span class="stat-num">79</span><span class="stat-label">Productos</span></div>
-    <div class="stat"><span class="stat-num">6</span><span class="stat-label">Colecciones</span></div>
-    <div class="stat"><span class="stat-num">1</span><span class="stat-label">Día de trabajo</span></div>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Colección 2025</p>
+    <h1 class="hero-title">Renovación<br><em>sin obra.</em></h1>
+    <p class="hero-sub">Transformamos tu espacio en un día. Sin escombros, sin ruidos, sin interrumpir tu vida.</p>
+    <a href="#catalogo" class="hero-cta">Explorar colección</a>
   </div>
-</div>
+  <div class="hero-scroll"><span>Scroll</span></div>
+</section>
 
-<div class="controls">
+<section class="intro">
+  <h2>Materiales que <em>transforman.</em></h2>
+  <p>Una selección premium de revestimientos para quienes valoran el diseño, el tiempo y la tranquilidad. Cada material pensado para aplicarse en un día, sin obra, sin polvo, sin esperas.</p>
+</section>
+
+<div class="controls" id="catalogo">
   <div class="search-wrap">
     <span class="search-icon">⌕</span>
-    <input type="text" id="search" placeholder="Buscar revestimiento...">
+    <input type="text" id="search" placeholder="Buscar material...">
   </div>
   <div class="filters">
     <button class="filter-btn active" data-cat="ALL">Todos</button>
@@ -329,65 +524,59 @@
     <button class="filter-btn" data-cat="PISOTAK">Pisotak</button>
     <button class="filter-btn" data-cat="KROMA">Kroma</button>
   </div>
-</div>
-
-<div class="results-bar">
-  Mostrando <span id="count">79</span> productos
+  <div class="results-count">Mostrando <span id="count">79</span> materiales</div>
 </div>
 
 <div class="grid" id="grid"></div>
-<div class="empty" id="empty">Sin resultados para tu búsqueda</div>
+<div class="empty" id="empty">Ningún material coincide con tu búsqueda.</div>
 
 <footer>
-  © CoverAll Deco — Renovación interior sin obra · <a href="https://coveralldeco.com">coveralldeco.com</a>
+  <img src="logoamarillocompleto.png" alt="CoverAll Deco" class="footer-logo">
+  <p class="footer-text">Renovación premium sin obra · <a href="https://coveralldeco.com">coveralldeco.com</a></p>
 </footer>
 
 <script>
-const PRODUCTS = [{"id": "crystal_jateado", "name": "Crystal Esmerilado", "category": "CRYSTAL", "costo_m2": 6.11, "img": "images/crystal_jateado.jpg", "precio_ars": 13000}, {"id": "crystal_quadra", "name": "Crystal Cuadros", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_quadra.jpg", "precio_ars": 16000}, {"id": "crystal_condessa", "name": "Crystal Condesa", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_condessa.jpg", "precio_ars": 16000}, {"id": "crystal_carbonium", "name": "Crystal Carbonio", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_carbonium.jpg", "precio_ars": 16000}, {"id": "crystal_krusher", "name": "Crystal Krusher", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_krusher.jpg", "precio_ars": 16000}, {"id": "crystal_rave", "name": "Crystal Rave", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_rave.jpg", "precio_ars": 16000}, {"id": "crystal_tropical", "name": "Crystal Jardín Tropical", "category": "CRYSTAL", "costo_m2": 8.84, "img": "images/crystal_tropical.jpg", "precio_ars": 19000}, {"id": "wood_burl", "name": "Wood Burl", "category": "WOOD", "costo_m2": 15.9, "img": "images/wood_burl.jpg", "precio_ars": 35000}, {"id": "wood_capuccino", "name": "Wood Roble Capuccino", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_capuccino.jpg", "precio_ars": 34000}, {"id": "wood_inovata", "name": "Wood Roble Inovata", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_inovata.jpg", "precio_ars": 34000}, {"id": "wood_verona", "name": "Wood Roble Verona", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_verona.jpg", "precio_ars": 34000}, {"id": "wood_sevilla", "name": "Wood Demolición Sevilla", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_sevilla.jpg", "precio_ars": 34000}, {"id": "wood_salamanca", "name": "Wood Rústica Salamanca", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_salamanca.jpg", "precio_ars": 34000}, {"id": "wood_cadiz", "name": "Wood Rústica Cádiz", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_cadiz.jpg", "precio_ars": 34000}, {"id": "wood_barcelona", "name": "Wood Demolición Barcelona", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_barcelona.jpg", "precio_ars": 34000}, {"id": "wood_pamplona", "name": "Wood Roble Pamplona", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_pamplona.jpg", "precio_ars": 34000}, {"id": "wood_tenerife", "name": "Wood Roble Tenerife", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_tenerife.jpg", "precio_ars": 34000}, {"id": "wood_vigo", "name": "Wood Listones Vigo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_vigo.jpg", "precio_ars": 34000}, {"id": "wood_lugo", "name": "Wood Listones Lugo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_lugo.jpg", "precio_ars": 34000}, {"id": "wood_burgo", "name": "Wood Listones Burgo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_burgo.jpg", "precio_ars": 34000}, {"id": "wood_galicia", "name": "Wood Fresno Galicia", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_galicia.jpg", "precio_ars": 34000}, {"id": "wood_asturias", "name": "Wood Fresno Asturias", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_asturias.jpg", "precio_ars": 34000}, {"id": "wood_toledo", "name": "Wood Fresno Toledo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_toledo.jpg", "precio_ars": 34000}, {"id": "lisboa", "name": "Lisboa", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/lisboa.jpg", "precio_ars": 34000}, {"id": "porto", "name": "Porto", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/porto.jpg", "precio_ars": 34000}, {"id": "metro_matte", "name": "Metro Blanco Mate", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/metro_matte.jpg", "precio_ars": 34000}, {"id": "metro_gloss", "name": "Metro Blanco Brillante", "category": "ESTAMPADOS", "costo_m2": 15.9, "img": "images/metro_gloss.jpg", "precio_ars": 35000}, {"id": "rhapsody", "name": "Rhapsody", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/rhapsody.jpg", "precio_ars": 34000}, {"id": "jardim_vertical", "name": "Jardín Vertical", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/jardim_vertical.jpg", "precio_ars": 34000}, {"id": "jardim_tropical", "name": "Jardín Tropical", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/jardim_tropical.jpg", "precio_ars": 34000}, {"id": "brick_white", "name": "Ladrillo Blanco", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_white.jpg", "precio_ars": 34000}, {"id": "brick_red", "name": "Ladrillo Rojo", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_red.jpg", "precio_ars": 34000}, {"id": "brick_black", "name": "Ladrillo Negro", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_black.jpg", "precio_ars": 34000}, {"id": "brick_london", "name": "Ladrillo Inglés London", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_london.jpg", "precio_ars": 34000}, {"id": "concrete", "name": "Concreto", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/concrete.jpg", "precio_ars": 34000}, {"id": "marble_nero", "name": "Mármol Negro", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_nero.jpg", "precio_ars": 35000}, {"id": "marble_bianco", "name": "Mármol Blanco", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_bianco.jpg", "precio_ars": 35000}, {"id": "marble_lunare_matte", "name": "Mármol Lunar Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_lunare_matte.jpg", "precio_ars": 34000}, {"id": "marble_lunare_gloss", "name": "Mármol Lunar Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_lunare_gloss.jpg", "precio_ars": 35000}, {"id": "marble_marquina_gloss", "name": "Mármol Marquina Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_marquina_gloss.jpg", "precio_ars": 35000}, {"id": "marble_marquina_matte", "name": "Mármol Marquina Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_marquina_matte.jpg", "precio_ars": 34000}, {"id": "marble_calacatta_gloss", "name": "Mármol Calacatta Oro Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_calacatta_gloss.jpg", "precio_ars": 35000}, {"id": "marble_calacatta_matte", "name": "Mármol Calacatta Oro Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_calacatta_matte.jpg", "precio_ars": 34000}, {"id": "marble_crema_gloss", "name": "Mármol Crema Marfil Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_crema_gloss.jpg", "precio_ars": 35000}, {"id": "marble_crema_matte", "name": "Mármol Crema Marfil Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_crema_matte.jpg", "precio_ars": 34000}, {"id": "marble_grigio_gloss", "name": "Mármol Gris Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_grigio_gloss.jpg", "precio_ars": 35000}, {"id": "marble_grigio_matte", "name": "Mármol Gris Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_grigio_matte.jpg", "precio_ars": 34000}, {"id": "marble_tivoli", "name": "Mármol Tivoli", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_tivoli.jpg", "precio_ars": 34000}, {"id": "lombarda_cenere_gloss", "name": "Lombarda Ceniza Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/lombarda_cenere_gloss.jpg", "precio_ars": 35000}, {"id": "lombarda_cenere_matte", "name": "Lombarda Ceniza Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/lombarda_cenere_matte.jpg", "precio_ars": 34000}, {"id": "lombarda_sabbia_gloss", "name": "Lombarda Arena Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/lombarda_sabbia_gloss.jpg", "precio_ars": 35000}, {"id": "lombarda_sabbia_matte", "name": "Lombarda Arena Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/lombarda_sabbia_matte.jpg", "precio_ars": 34000}, {"id": "tramatto_beige", "name": "Tramatto Beige", "category": "PEDRAS", "costo_m2": 17.94, "img": "images/tramatto_beige.jpg", "precio_ars": 40000}, {"id": "tramatto_gris", "name": "Tramatto Gris", "category": "PEDRAS", "costo_m2": 17.94, "img": "images/tramatto_gris.jpg", "precio_ars": 40000}, {"id": "deck_valencia", "name": "Deck Valencia", "category": "PISOTAK", "costo_m2": 17.42, "img": "images/deck_valencia.jpg", "precio_ars": 38000}, {"id": "deck_madri", "name": "Deck Madrid", "category": "PISOTAK", "costo_m2": 17.42, "img": "images/deck_madri.jpg", "precio_ars": 38000}, {"id": "kroma_avila", "name": "Kroma Madera Ávila", "category": "KROMA", "costo_m2": 14.32, "img": "images/kroma_avila.jpg", "precio_ars": 32000}, {"id": "kroma_lerida", "name": "Kroma Madera Lérida", "category": "KROMA", "costo_m2": 14.32, "img": "images/kroma_lerida.jpg", "precio_ars": 32000}, {"id": "kroma_segovia", "name": "Kroma Madera Segovia", "category": "KROMA", "costo_m2": 14.32, "img": "images/kroma_segovia.jpg", "precio_ars": 32000}, {"id": "kroma_bilbao", "name": "Kroma Madera Bilbao", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_bilbao.jpg", "precio_ars": 29000}, {"id": "kroma_teruel", "name": "Kroma Madera Teruel", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_teruel.jpg", "precio_ars": 29000}, {"id": "kroma_branco_artico", "name": "Kroma Blanco Ártico", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_branco_artico.jpg", "precio_ars": 29000}, {"id": "kroma_cinza_fossil", "name": "Kroma Gris Fossil", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_cinza_fossil.jpg", "precio_ars": 29000}, {"id": "kroma_preto_absoluto", "name": "Kroma Negro Absoluto", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_preto_absoluto.jpg", "precio_ars": 29000}, {"id": "kroma_argento", "name": "Kroma Plateado", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_argento.jpg", "precio_ars": 29000}, {"id": "kroma_azul_petroleo", "name": "Kroma Azul Petróleo", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_azul_petroleo.jpg", "precio_ars": 29000}, {"id": "kroma_verde_primavera", "name": "Kroma Verde Primavera", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_verde_primavera.jpg", "precio_ars": 29000}, {"id": "kroma_grafite", "name": "Kroma Grafito", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_grafite.jpg", "precio_ars": 29000}, {"id": "kroma_aveia", "name": "Kroma Avena", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_aveia.jpg", "precio_ars": 29000}, {"id": "kroma_fendi", "name": "Kroma Fendi", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_fendi.jpg", "precio_ars": 29000}, {"id": "kroma_gamboge", "name": "Kroma Gamboge", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_gamboge.jpg", "precio_ars": 29000}, {"id": "kroma_olaria", "name": "Kroma Alfarería", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_olaria.jpg", "precio_ars": 29000}, {"id": "kroma_merlot", "name": "Kroma Merlot", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_merlot.jpg", "precio_ars": 29000}, {"id": "kroma_verde_oliva", "name": "Kroma Verde Oliva", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_verde_oliva.jpg", "precio_ars": 29000}, {"id": "kroma_falesia", "name": "Kroma Acantilado", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_falesia.jpg", "precio_ars": 29000}, {"id": "kroma_avorio", "name": "Kroma Marfil", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_avorio.jpg", "precio_ars": 29000}, {"id": "kroma_rattan", "name": "Kroma Ratán Off White", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_rattan.jpg", "precio_ars": 29000}, {"id": "kroma_cuoro", "name": "Kroma Cuero Off White", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_cuoro.jpg", "precio_ars": 29000}, {"id": "kroma_malbec", "name": "Kroma Malbec", "category": "KROMA", "costo_m2": 14.69, "img": "images/kroma_malbec.jpg", "precio_ars": 32000}];
+const PRODUCTS = [{"id": "crystal_jateado", "name": "Crystal Esmerilado", "category": "CRYSTAL", "costo_m2": 6.11, "img": "images/crystal_jateado.jpg", "precio_ars": 13000, "display_name": "Crystal Esmerilado", "subtitle": "Luz difusa para ambientes de autor"}, {"id": "crystal_quadra", "name": "Crystal Cuadros", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_quadra.jpg", "precio_ars": 16000, "display_name": "Crystal Cuadros", "subtitle": "Geometría sutil de inspiración contemporánea"}, {"id": "crystal_condessa", "name": "Crystal Condesa", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_condessa.jpg", "precio_ars": 16000, "display_name": "Crystal Condesa", "subtitle": "Transparencia elegante de origen europeo"}, {"id": "crystal_carbonium", "name": "Crystal Carbonio", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_carbonium.jpg", "precio_ars": 16000, "display_name": "Crystal Carbonio", "subtitle": "Oscuridad sofisticada para espacios únicos"}, {"id": "crystal_krusher", "name": "Crystal Krusher", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_krusher.jpg", "precio_ars": 16000, "display_name": "Crystal Krusher", "subtitle": "Textura vibrante con impacto visual"}, {"id": "crystal_rave", "name": "Crystal Rave", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_rave.jpg", "precio_ars": 16000, "display_name": "Crystal Rave", "subtitle": "Dinamismo contenido para superficies con carácter"}, {"id": "crystal_tropical", "name": "Crystal Jardín Tropical", "category": "CRYSTAL", "costo_m2": 8.84, "img": "images/crystal_tropical.jpg", "precio_ars": 19000, "display_name": "Crystal Jardín Tropical", "subtitle": "Naturaleza premium para espacios que sorprenden"}, {"id": "wood_burl", "name": "Wood Burl", "category": "WOOD", "costo_m2": 15.9, "img": "images/wood_burl.jpg", "precio_ars": 35000, "display_name": "Burl", "subtitle": "Veta única de raíz, para espacios irrepetibles"}, {"id": "wood_capuccino", "name": "Wood Roble Capuccino", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_capuccino.jpg", "precio_ars": 34000, "display_name": "Roble Capuccino", "subtitle": "Calidez profunda en tonos terrosos"}, {"id": "wood_inovata", "name": "Wood Roble Inovata", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_inovata.jpg", "precio_ars": 34000, "display_name": "Roble Inovata", "subtitle": "Roble contemporáneo de acabado satinado"}, {"id": "wood_verona", "name": "Wood Roble Verona", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_verona.jpg", "precio_ars": 34000, "display_name": "Roble Verona", "subtitle": "Inspiración italiana en cada línea"}, {"id": "wood_sevilla", "name": "Wood Demolición Sevilla", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_sevilla.jpg", "precio_ars": 34000, "display_name": "Demolición Sevilla", "subtitle": "Historia y textura para interiores con alma"}, {"id": "wood_salamanca", "name": "Wood Rústica Salamanca", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_salamanca.jpg", "precio_ars": 34000, "display_name": "Rústica Salamanca", "subtitle": "Lo artesanal elevado a premium"}, {"id": "wood_cadiz", "name": "Wood Rústica Cádiz", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_cadiz.jpg", "precio_ars": 34000, "display_name": "Rústica Cádiz", "subtitle": "Carácter mediterráneo con sofisticación"}, {"id": "wood_barcelona", "name": "Wood Demolición Barcelona", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_barcelona.jpg", "precio_ars": 34000, "display_name": "Demolición Barcelona", "subtitle": "Madera con memoria para espacios únicos"}, {"id": "wood_pamplona", "name": "Wood Roble Pamplona", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_pamplona.jpg", "precio_ars": 34000, "display_name": "Roble Pamplona", "subtitle": "Elegancia nórdica con raíces ibéricas"}, {"id": "wood_tenerife", "name": "Wood Roble Tenerife", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_tenerife.jpg", "precio_ars": 34000, "display_name": "Roble Tenerife", "subtitle": "Veteado natural de acabado superior"}, {"id": "wood_vigo", "name": "Wood Listones Vigo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_vigo.jpg", "precio_ars": 34000, "display_name": "Listones Vigo", "subtitle": "Ritmo vertical para espacios modernos"}, {"id": "wood_lugo", "name": "Wood Listones Lugo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_lugo.jpg", "precio_ars": 34000, "display_name": "Listones Lugo", "subtitle": "Textura cálida para espacios contemporáneos"}, {"id": "wood_burgo", "name": "Wood Listones Burgo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_burgo.jpg", "precio_ars": 34000, "display_name": "Listones Burgo", "subtitle": "Ritmo y calidez en madera de alto diseño"}, {"id": "wood_galicia", "name": "Wood Fresno Galicia", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_galicia.jpg", "precio_ars": 34000, "display_name": "Fresno Galicia", "subtitle": "Veta fina y luminosa, elegancia natural"}, {"id": "wood_asturias", "name": "Wood Fresno Asturias", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_asturias.jpg", "precio_ars": 34000, "display_name": "Fresno Asturias", "subtitle": "Claridad y calidez del bosque atlántico"}, {"id": "wood_toledo", "name": "Wood Fresno Toledo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_toledo.jpg", "precio_ars": 34000, "display_name": "Fresno Toledo", "subtitle": "Madera premium de acabado refinado"}, {"id": "lisboa", "name": "Lisboa", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/lisboa.jpg", "precio_ars": 34000, "display_name": "Lisboa", "subtitle": "Azulejo reinterpretado en clave contemporánea"}, {"id": "porto", "name": "Porto", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/porto.jpg", "precio_ars": 34000, "display_name": "Porto", "subtitle": "Geometría portuguesa de inspiración atemporal"}, {"id": "metro_matte", "name": "Metro Blanco Mate", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/metro_matte.jpg", "precio_ars": 34000, "display_name": "Metro Blanco Mate", "subtitle": "Pureza clásica para ambientes sin tiempo"}, {"id": "metro_gloss", "name": "Metro Blanco Brillante", "category": "ESTAMPADOS", "costo_m2": 15.9, "img": "images/metro_gloss.jpg", "precio_ars": 35000, "display_name": "Metro Blanco Brillante", "subtitle": "Reflexión luminosa para cocinas de diseño"}, {"id": "rhapsody", "name": "Rhapsody", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/rhapsody.jpg", "precio_ars": 34000, "display_name": "Rhapsody", "subtitle": "Movimiento abstracto para paredes con carácter"}, {"id": "jardim_vertical", "name": "Jardín Vertical", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/jardim_vertical.jpg", "precio_ars": 34000, "display_name": "Jardín Vertical", "subtitle": "Naturaleza vertical para interiores que respiran"}, {"id": "jardim_tropical", "name": "Jardín Tropical", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/jardim_tropical.jpg", "precio_ars": 34000, "display_name": "Jardín Tropical", "subtitle": "Exuberancia contenida para espacios con vida"}, {"id": "brick_white", "name": "Ladrillo Blanco", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_white.jpg", "precio_ars": 34000, "display_name": "Ladrillo Blanco", "subtitle": "Industrial refinado para espacios urbanos"}, {"id": "brick_red", "name": "Ladrillo Rojo", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_red.jpg", "precio_ars": 34000, "display_name": "Ladrillo Rojo", "subtitle": "Calidez raw para interiores con carácter"}, {"id": "brick_black", "name": "Ladrillo Negro", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_black.jpg", "precio_ars": 34000, "display_name": "Ladrillo Negro", "subtitle": "Oscuridad sofisticada de inspiración loft"}, {"id": "brick_london", "name": "Ladrillo Inglés London", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_london.jpg", "precio_ars": 34000, "display_name": "Ladrillo London", "subtitle": "Elegancia británica para ambientes con historia"}, {"id": "concrete", "name": "Concreto", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/concrete.jpg", "precio_ars": 34000, "display_name": "Concreto", "subtitle": "Pureza gris para el minimalismo moderno"}, {"id": "marble_nero", "name": "Mármol Negro", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_nero.jpg", "precio_ars": 35000, "display_name": "Nero", "subtitle": "Oscuridad total. Lujo absoluto"}, {"id": "marble_bianco", "name": "Mármol Blanco", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_bianco.jpg", "precio_ars": 35000, "display_name": "Bianco", "subtitle": "Pureza del mármol clásico de Carrara"}, {"id": "marble_lunare_matte", "name": "Mármol Lunar Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_lunare_matte.jpg", "precio_ars": 34000, "display_name": "Lunar Mate", "subtitle": "Suavidad lunar para espacios contemplativos"}, {"id": "marble_lunare_gloss", "name": "Mármol Lunar Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_lunare_gloss.jpg", "precio_ars": 35000, "display_name": "Lunar Brillante", "subtitle": "Reflejo suave de luz indirecta"}, {"id": "marble_marquina_gloss", "name": "Mármol Marquina Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_marquina_gloss.jpg", "precio_ars": 35000, "display_name": "Marquina Brillante", "subtitle": "Negro intenso con veta blanca. Lujo total"}, {"id": "marble_marquina_matte", "name": "Mármol Marquina Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_marquina_matte.jpg", "precio_ars": 34000, "display_name": "Marquina Mate", "subtitle": "Opulencia oscura en acabado mate"}, {"id": "marble_calacatta_gloss", "name": "Mármol Calacatta Oro Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_calacatta_gloss.jpg", "precio_ars": 35000, "display_name": "Calacatta Oro Brillante", "subtitle": "El rey del mármol italiano en su máximo esplendor"}, {"id": "marble_calacatta_matte", "name": "Mármol Calacatta Oro Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_calacatta_matte.jpg", "precio_ars": 34000, "display_name": "Calacatta Oro Mate", "subtitle": "Calacatta en versión mate. Lujo contenido"}, {"id": "marble_crema_gloss", "name": "Mármol Crema Marfil Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_crema_gloss.jpg", "precio_ars": 35000, "display_name": "Crema Marfil Brillante", "subtitle": "Calidez mediterránea en tono marfil"}, {"id": "marble_crema_matte", "name": "Mármol Crema Marfil Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_crema_matte.jpg", "precio_ars": 34000, "display_name": "Crema Marfil Mate", "subtitle": "Sutileza crema para ambientes serenos"}, {"id": "marble_grigio_gloss", "name": "Mármol Gris Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_grigio_gloss.jpg", "precio_ars": 35000, "display_name": "Grigio Brillante", "subtitle": "Gris arquitectónico con profundidad"}, {"id": "marble_grigio_matte", "name": "Mármol Gris Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_grigio_matte.jpg", "precio_ars": 34000, "display_name": "Grigio Mate", "subtitle": "Minimalismo gris de diseño contemporáneo"}, {"id": "marble_tivoli", "name": "Mármol Tivoli", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_tivoli.jpg", "precio_ars": 34000, "display_name": "Tivoli", "subtitle": "Veladuras suaves del mármol clásico italiano"}, {"id": "lombarda_cenere_gloss", "name": "Lombarda Ceniza Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/lombarda_cenere_gloss.jpg", "precio_ars": 35000, "display_name": "Lombarda Ceniza Brillante", "subtitle": "Ceniza viva para superficies con presencia"}, {"id": "lombarda_cenere_matte", "name": "Lombarda Ceniza Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/lombarda_cenere_matte.jpg", "precio_ars": 34000, "display_name": "Lombarda Ceniza Mate", "subtitle": "Elegancia gris en acabado mate absoluto"}, {"id": "lombarda_sabbia_gloss", "name": "Lombarda Arena Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/lombarda_sabbia_gloss.jpg", "precio_ars": 35000, "display_name": "Lombarda Arena Brillante", "subtitle": "Calidez de arena con brillo contenido"}, {"id": "lombarda_sabbia_matte", "name": "Lombarda Arena Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/lombarda_sabbia_matte.jpg", "precio_ars": 34000, "display_name": "Lombarda Arena Mate", "subtitle": "Textura cálida para espacios sin tiempo"}, {"id": "tramatto_beige", "name": "Tramatto Beige", "category": "PEDRAS", "costo_m2": 17.94, "img": "images/tramatto_beige.jpg", "precio_ars": 40000, "display_name": "Tramatto Beige", "subtitle": "Travertino reinterpretado para el presente"}, {"id": "tramatto_gris", "name": "Tramatto Gris", "category": "PEDRAS", "costo_m2": 17.94, "img": "images/tramatto_gris.jpg", "precio_ars": 40000, "display_name": "Tramatto Gris", "subtitle": "Piedra contemporánea para espacios de diseño"}, {"id": "deck_valencia", "name": "Deck Valencia", "category": "PISOTAK", "costo_m2": 17.42, "img": "images/deck_valencia.jpg", "precio_ars": 38000, "display_name": "Deck Valencia", "subtitle": "Madera exterior premium para terrazas de autor"}, {"id": "deck_madri", "name": "Deck Madrid", "category": "PISOTAK", "costo_m2": 17.42, "img": "images/deck_madri.jpg", "precio_ars": 38000, "display_name": "Deck Madrid", "subtitle": "Suelo de diseño para espacios al aire libre"}, {"id": "kroma_avila", "name": "Kroma Madera Ávila", "category": "KROMA", "costo_m2": 14.32, "img": "images/kroma_avila.jpg", "precio_ars": 32000, "display_name": "Kroma Ávila", "subtitle": "Roble estructurado para espacios cálidos"}, {"id": "kroma_lerida", "name": "Kroma Madera Lérida", "category": "KROMA", "costo_m2": 14.32, "img": "images/kroma_lerida.jpg", "precio_ars": 32000, "display_name": "Kroma Lérida", "subtitle": "Madera fina para interiores de diseño"}, {"id": "kroma_segovia", "name": "Kroma Madera Segovia", "category": "KROMA", "costo_m2": 14.32, "img": "images/kroma_segovia.jpg", "precio_ars": 32000, "display_name": "Kroma Segovia", "subtitle": "Calidez castellana en superficie premium"}, {"id": "kroma_bilbao", "name": "Kroma Madera Bilbao", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_bilbao.jpg", "precio_ars": 29000, "display_name": "Kroma Bilbao", "subtitle": "Vanguardia vasca en acabado contemporáneo"}, {"id": "kroma_teruel", "name": "Kroma Madera Teruel", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_teruel.jpg", "precio_ars": 29000, "display_name": "Kroma Teruel", "subtitle": "Textura terrosa para espacios con carácter"}, {"id": "kroma_branco_artico", "name": "Kroma Blanco Ártico", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_branco_artico.jpg", "precio_ars": 29000, "display_name": "Blanco Ártico", "subtitle": "Pureza polar para interiores luminosos"}, {"id": "kroma_cinza_fossil", "name": "Kroma Gris Fossil", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_cinza_fossil.jpg", "precio_ars": 29000, "display_name": "Gris Fossil", "subtitle": "Gris orgánico para ambientes modernos"}, {"id": "kroma_preto_absoluto", "name": "Kroma Negro Absoluto", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_preto_absoluto.jpg", "precio_ars": 29000, "display_name": "Negro Absoluto", "subtitle": "Oscuridad total para espacios de impacto"}, {"id": "kroma_argento", "name": "Kroma Plateado", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_argento.jpg", "precio_ars": 29000, "display_name": "Plateado", "subtitle": "Metálico sutil para superficies contemporáneas"}, {"id": "kroma_azul_petroleo", "name": "Kroma Azul Petróleo", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_azul_petroleo.jpg", "precio_ars": 29000, "display_name": "Azul Petróleo", "subtitle": "Profundidad oceánica para espacios únicos"}, {"id": "kroma_verde_primavera", "name": "Kroma Verde Primavera", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_verde_primavera.jpg", "precio_ars": 29000, "display_name": "Verde Primavera", "subtitle": "Naturaleza viva en acabado premium"}, {"id": "kroma_grafite", "name": "Kroma Grafito", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_grafite.jpg", "precio_ars": 29000, "display_name": "Grafito", "subtitle": "Oscuridad urbana para diseño contemporáneo"}, {"id": "kroma_aveia", "name": "Kroma Avena", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_aveia.jpg", "precio_ars": 29000, "display_name": "Avena", "subtitle": "Neutralidad cálida para espacios serenos"}, {"id": "kroma_fendi", "name": "Kroma Fendi", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_fendi.jpg", "precio_ars": 29000, "display_name": "Fendi", "subtitle": "Elegancia italiana en tono arena oscuro"}, {"id": "kroma_gamboge", "name": "Kroma Gamboge", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_gamboge.jpg", "precio_ars": 29000, "display_name": "Gamboge", "subtitle": "Ocre vibrante para espacios con personalidad"}, {"id": "kroma_olaria", "name": "Kroma Alfarería", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_olaria.jpg", "precio_ars": 29000, "display_name": "Alfarería", "subtitle": "Tierra cocida para interiores con historia"}, {"id": "kroma_merlot", "name": "Kroma Merlot", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_merlot.jpg", "precio_ars": 29000, "display_name": "Merlot", "subtitle": "Intensidad vinícola para superficies audaces"}, {"id": "kroma_verde_oliva", "name": "Kroma Verde Oliva", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_verde_oliva.jpg", "precio_ars": 29000, "display_name": "Verde Oliva", "subtitle": "Verde mediterráneo de sofisticación natural"}, {"id": "kroma_falesia", "name": "Kroma Acantilado", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_falesia.jpg", "precio_ars": 29000, "display_name": "Acantilado", "subtitle": "Terracota suave del litoral atlántico"}, {"id": "kroma_avorio", "name": "Kroma Marfil", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_avorio.jpg", "precio_ars": 29000, "display_name": "Marfil", "subtitle": "Tono marfil atemporal para ambientes serenos"}, {"id": "kroma_rattan", "name": "Kroma Ratán Off White", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_rattan.jpg", "precio_ars": 29000, "display_name": "Ratán Off White", "subtitle": "Textura artesanal en tono crema natural"}, {"id": "kroma_cuoro", "name": "Kroma Cuero Off White", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_cuoro.jpg", "precio_ars": 29000, "display_name": "Cuero Off White", "subtitle": "Piel sutil en versión minimalista y luminosa"}, {"id": "kroma_malbec", "name": "Kroma Malbec", "category": "KROMA", "costo_m2": 14.69, "img": "images/kroma_malbec.jpg", "precio_ars": 32000, "display_name": "Malbec", "subtitle": "Vino oscuro para espacios de carácter propio"}];
 
 const CAT_LABELS = {
-  CRYSTAL: 'Crystal', WOOD: 'Wood', ESTAMPADOS: 'Estampados',
-  PEDRAS: 'Mármoles', PISOTAK: 'Pisotak', KROMA: 'Kroma'
+  CRYSTAL:'Crystal', WOOD:'Wood', ESTAMPADOS:'Estampados',
+  PEDRAS:'Mármoles', PISOTAK:'Pisotak', KROMA:'Kroma'
 };
 
-function formatARS(n) {
-  return '$\u202F' + n.toLocaleString('es-AR');
+function fmt(n) {
+  return '$ ' + n.toLocaleString('es-AR');
 }
 
 function renderCards(list) {
   const grid = document.getElementById('grid');
   const empty = document.getElementById('empty');
   document.getElementById('count').textContent = list.length;
-  if (list.length === 0) {
-    grid.innerHTML = '';
-    empty.classList.add('show');
-    return;
-  }
+  if (!list.length) { grid.innerHTML = ''; empty.classList.add('show'); return; }
   empty.classList.remove('show');
   grid.innerHTML = list.map(p => `
     <div class="card" data-cat="${p.category}">
       <div class="card-img">
-        <img src="${p.img}" alt="${p.name}" loading="lazy">
-        <span class="cat-badge">${CAT_LABELS[p.category] || p.category}</span>
+        <img src="${p.img}" alt="${p.display_name}" loading="lazy">
       </div>
-      <div class="card-body">
-        <h3>${p.name}</h3>
-        <div class="price">${formatARS(p.precio_ars)} <span>/ m²</span></div>
+      <div class="card-overlay"></div>
+      <div class="card-content">
+        <span class="cat-badge">${CAT_LABELS[p.category] || p.category}</span>
+        <div class="card-name">${p.display_name}</div>
+        <div class="card-sub">${p.subtitle}</div>
+        <div class="card-price">${fmt(p.precio_ars)}<small>/ m²</small></div>
       </div>
     </div>
   `).join('');
 }
 
-let currentCat = 'ALL';
-let currentSearch = '';
-
-function applyFilters() {
+let cat = 'ALL', q = '';
+function filter() {
   let list = PRODUCTS;
-  if (currentCat !== 'ALL') list = list.filter(p => p.category === currentCat);
-  if (currentSearch) {
-    const q = currentSearch.toLowerCase();
-    list = list.filter(p => p.name.toLowerCase().includes(q));
-  }
+  if (cat !== 'ALL') list = list.filter(p => p.category === cat);
+  if (q) list = list.filter(p =>
+    p.display_name.toLowerCase().includes(q) ||
+    p.name.toLowerCase().includes(q)
+  );
   renderCards(list);
 }
 
@@ -395,17 +584,17 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    currentCat = btn.dataset.cat;
-    applyFilters();
+    cat = btn.dataset.cat;
+    filter();
   });
 });
 
 document.getElementById('search').addEventListener('input', e => {
-  currentSearch = e.target.value.trim();
-  applyFilters();
+  q = e.target.value.trim().toLowerCase();
+  filter();
 });
 
-applyFilters();
+filter();
 </script>
 </body>
 </html>
