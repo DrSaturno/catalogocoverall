@@ -1,555 +1,634 @@
 [
   {
     "id": "crystal_jateado",
-    "name": "Crystal Jateado",
+    "name": "Crystal Esmerilado",
     "category": "CRYSTAL",
     "costo_m2": 6.11,
-    "img": "images/crystal_jateado.jpg"
+    "img": "images/crystal_jateado.jpg",
+    "precio_ars": 13000
   },
   {
     "id": "crystal_quadra",
-    "name": "Crystal Quadra",
+    "name": "Crystal Cuadros",
     "category": "CRYSTAL",
     "costo_m2": 7.42,
-    "img": "images/crystal_quadra.jpg"
+    "img": "images/crystal_quadra.jpg",
+    "precio_ars": 16000
   },
   {
     "id": "crystal_condessa",
-    "name": "Crystal Condessa",
+    "name": "Crystal Condesa",
     "category": "CRYSTAL",
     "costo_m2": 7.42,
-    "img": "images/crystal_condessa.jpg"
+    "img": "images/crystal_condessa.jpg",
+    "precio_ars": 16000
   },
   {
     "id": "crystal_carbonium",
-    "name": "Crystal Carbonium",
+    "name": "Crystal Carbonio",
     "category": "CRYSTAL",
     "costo_m2": 7.42,
-    "img": "images/crystal_carbonium.jpg"
+    "img": "images/crystal_carbonium.jpg",
+    "precio_ars": 16000
   },
   {
     "id": "crystal_krusher",
     "name": "Crystal Krusher",
     "category": "CRYSTAL",
     "costo_m2": 7.42,
-    "img": "images/crystal_krusher.jpg"
+    "img": "images/crystal_krusher.jpg",
+    "precio_ars": 16000
   },
   {
     "id": "crystal_rave",
     "name": "Crystal Rave",
     "category": "CRYSTAL",
     "costo_m2": 7.42,
-    "img": "images/crystal_rave.jpg"
+    "img": "images/crystal_rave.jpg",
+    "precio_ars": 16000
   },
   {
     "id": "crystal_tropical",
-    "name": "Crystal Tropical Garden",
+    "name": "Crystal Jardín Tropical",
     "category": "CRYSTAL",
     "costo_m2": 8.84,
-    "img": "images/crystal_tropical.jpg"
+    "img": "images/crystal_tropical.jpg",
+    "precio_ars": 19000
   },
   {
     "id": "wood_burl",
     "name": "Wood Burl",
     "category": "WOOD",
     "costo_m2": 15.9,
-    "img": "images/wood_burl.jpg"
+    "img": "images/wood_burl.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "wood_capuccino",
-    "name": "Wood Carvalho Capuccino",
+    "name": "Wood Roble Capuccino",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_capuccino.jpg"
+    "img": "images/wood_capuccino.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_inovata",
-    "name": "Wood Carvalho Inovata",
+    "name": "Wood Roble Inovata",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_inovata.jpg"
+    "img": "images/wood_inovata.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_verona",
-    "name": "Wood Carvalho Verona",
+    "name": "Wood Roble Verona",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_verona.jpg"
+    "img": "images/wood_verona.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_sevilla",
-    "name": "Wood Demolição Sevilla",
+    "name": "Wood Demolición Sevilla",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_sevilla.jpg"
+    "img": "images/wood_sevilla.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_salamanca",
     "name": "Wood Rústica Salamanca",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_salamanca.jpg"
+    "img": "images/wood_salamanca.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_cadiz",
     "name": "Wood Rústica Cádiz",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_cadiz.jpg"
+    "img": "images/wood_cadiz.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_barcelona",
-    "name": "Wood Demolição Barcelona",
+    "name": "Wood Demolición Barcelona",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_barcelona.jpg"
+    "img": "images/wood_barcelona.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_pamplona",
-    "name": "Wood Carvalho Pamplona",
+    "name": "Wood Roble Pamplona",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_pamplona.jpg"
+    "img": "images/wood_pamplona.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_tenerife",
-    "name": "Wood Carvalho Tenerife",
+    "name": "Wood Roble Tenerife",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_tenerife.jpg"
+    "img": "images/wood_tenerife.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_vigo",
-    "name": "Wood Ripado Vigo",
+    "name": "Wood Listones Vigo",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_vigo.jpg"
+    "img": "images/wood_vigo.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_lugo",
-    "name": "Wood Ripado Lugo",
+    "name": "Wood Listones Lugo",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_lugo.jpg"
+    "img": "images/wood_lugo.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_burgo",
-    "name": "Wood Ripado Burgo",
+    "name": "Wood Listones Burgo",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_burgo.jpg"
+    "img": "images/wood_burgo.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_galicia",
-    "name": "Wood Freijo Galicia",
+    "name": "Wood Fresno Galicia",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_galicia.jpg"
+    "img": "images/wood_galicia.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_asturias",
-    "name": "Wood Freijo Asturias",
+    "name": "Wood Fresno Asturias",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_asturias.jpg"
+    "img": "images/wood_asturias.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "wood_toledo",
-    "name": "Wood Freijo Toledo",
+    "name": "Wood Fresno Toledo",
     "category": "WOOD",
     "costo_m2": 15.57,
-    "img": "images/wood_toledo.jpg"
+    "img": "images/wood_toledo.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "lisboa",
     "name": "Lisboa",
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
-    "img": "images/lisboa.jpg"
+    "img": "images/lisboa.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "porto",
     "name": "Porto",
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
-    "img": "images/porto.jpg"
+    "img": "images/porto.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "metro_matte",
-    "name": "Metro White Matte",
+    "name": "Metro Blanco Mate",
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
-    "img": "images/metro_matte.jpg"
+    "img": "images/metro_matte.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "metro_gloss",
-    "name": "Metro White Gloss",
+    "name": "Metro Blanco Brillante",
     "category": "ESTAMPADOS",
     "costo_m2": 15.9,
-    "img": "images/metro_gloss.jpg"
+    "img": "images/metro_gloss.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "rhapsody",
     "name": "Rhapsody",
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
-    "img": "images/rhapsody.jpg"
+    "img": "images/rhapsody.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "jardim_vertical",
-    "name": "Jardim Vertical",
+    "name": "Jardín Vertical",
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
-    "img": "images/jardim_vertical.jpg"
+    "img": "images/jardim_vertical.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "jardim_tropical",
-    "name": "Jardim Tropical",
+    "name": "Jardín Tropical",
     "category": "ESTAMPADOS",
     "costo_m2": 15.57,
-    "img": "images/jardim_tropical.jpg"
+    "img": "images/jardim_tropical.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "brick_white",
-    "name": "Brick White",
+    "name": "Ladrillo Blanco",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/brick_white.jpg"
+    "img": "images/brick_white.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "brick_red",
-    "name": "Brick Red",
+    "name": "Ladrillo Rojo",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/brick_red.jpg"
+    "img": "images/brick_red.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "brick_black",
-    "name": "Brick Black",
+    "name": "Ladrillo Negro",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/brick_black.jpg"
+    "img": "images/brick_black.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "brick_london",
-    "name": "English Brick London",
+    "name": "Ladrillo Inglés London",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/brick_london.jpg"
+    "img": "images/brick_london.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "concrete",
-    "name": "Concrete",
+    "name": "Concreto",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/concrete.jpg"
+    "img": "images/concrete.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "marble_nero",
-    "name": "Marble Nero",
+    "name": "Mármol Negro",
     "category": "PEDRAS",
     "costo_m2": 15.9,
-    "img": "images/marble_nero.jpg"
+    "img": "images/marble_nero.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "marble_bianco",
-    "name": "Marble Bianco",
+    "name": "Mármol Blanco",
     "category": "PEDRAS",
     "costo_m2": 15.9,
-    "img": "images/marble_bianco.jpg"
+    "img": "images/marble_bianco.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "marble_lunare_matte",
-    "name": "Marble Lunare Matte",
+    "name": "Mármol Lunar Mate",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/marble_lunare_matte.jpg"
+    "img": "images/marble_lunare_matte.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "marble_lunare_gloss",
-    "name": "Marble Lunare Gloss",
+    "name": "Mármol Lunar Brillante",
     "category": "PEDRAS",
     "costo_m2": 15.9,
-    "img": "images/marble_lunare_gloss.jpg"
+    "img": "images/marble_lunare_gloss.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "marble_marquina_gloss",
-    "name": "Marble Marquina Gloss",
+    "name": "Mármol Marquina Brillante",
     "category": "PEDRAS",
     "costo_m2": 15.9,
-    "img": "images/marble_marquina_gloss.jpg"
+    "img": "images/marble_marquina_gloss.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "marble_marquina_matte",
-    "name": "Marble Marquina Matte",
+    "name": "Mármol Marquina Mate",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/marble_marquina_matte.jpg"
+    "img": "images/marble_marquina_matte.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "marble_calacatta_gloss",
-    "name": "Marble Calacatta Oro Gloss",
+    "name": "Mármol Calacatta Oro Brillante",
     "category": "PEDRAS",
     "costo_m2": 15.9,
-    "img": "images/marble_calacatta_gloss.jpg"
+    "img": "images/marble_calacatta_gloss.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "marble_calacatta_matte",
-    "name": "Marble Calacatta Oro Matte",
+    "name": "Mármol Calacatta Oro Mate",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/marble_calacatta_matte.jpg"
+    "img": "images/marble_calacatta_matte.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "marble_crema_gloss",
-    "name": "Marble Crema Marfil Gloss",
+    "name": "Mármol Crema Marfil Brillante",
     "category": "PEDRAS",
     "costo_m2": 15.9,
-    "img": "images/marble_crema_gloss.jpg"
+    "img": "images/marble_crema_gloss.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "marble_crema_matte",
-    "name": "Marble Crema Marfil Matte",
+    "name": "Mármol Crema Marfil Mate",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/marble_crema_matte.jpg"
+    "img": "images/marble_crema_matte.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "marble_grigio_gloss",
-    "name": "Marble Grigio Gloss",
+    "name": "Mármol Gris Brillante",
     "category": "PEDRAS",
     "costo_m2": 15.9,
-    "img": "images/marble_grigio_gloss.jpg"
+    "img": "images/marble_grigio_gloss.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "marble_grigio_matte",
-    "name": "Marble Grigio Matte",
+    "name": "Mármol Gris Mate",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/marble_grigio_matte.jpg"
+    "img": "images/marble_grigio_matte.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "marble_tivoli",
-    "name": "Marble Tivoli",
+    "name": "Mármol Tivoli",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/marble_tivoli.jpg"
+    "img": "images/marble_tivoli.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "lombarda_cenere_gloss",
-    "name": "Lombarda Cenere Gloss",
+    "name": "Lombarda Ceniza Brillante",
     "category": "PEDRAS",
     "costo_m2": 15.9,
-    "img": "images/lombarda_cenere_gloss.jpg"
+    "img": "images/lombarda_cenere_gloss.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "lombarda_cenere_matte",
-    "name": "Lombarda Cenere Matte",
+    "name": "Lombarda Ceniza Mate",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/lombarda_cenere_matte.jpg"
+    "img": "images/lombarda_cenere_matte.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "lombarda_sabbia_gloss",
-    "name": "Lombarda Sabbia Gloss",
+    "name": "Lombarda Arena Brillante",
     "category": "PEDRAS",
     "costo_m2": 15.9,
-    "img": "images/lombarda_sabbia_gloss.jpg"
+    "img": "images/lombarda_sabbia_gloss.jpg",
+    "precio_ars": 35000
   },
   {
     "id": "lombarda_sabbia_matte",
-    "name": "Lombarda Sabbia Matte",
+    "name": "Lombarda Arena Mate",
     "category": "PEDRAS",
     "costo_m2": 15.57,
-    "img": "images/lombarda_sabbia_matte.jpg"
+    "img": "images/lombarda_sabbia_matte.jpg",
+    "precio_ars": 34000
   },
   {
     "id": "tramatto_beige",
     "name": "Tramatto Beige",
     "category": "PEDRAS",
     "costo_m2": 17.94,
-    "img": "images/tramatto_beige.jpg"
+    "img": "images/tramatto_beige.jpg",
+    "precio_ars": 40000
   },
   {
     "id": "tramatto_gris",
     "name": "Tramatto Gris",
     "category": "PEDRAS",
     "costo_m2": 17.94,
-    "img": "images/tramatto_gris.jpg"
+    "img": "images/tramatto_gris.jpg",
+    "precio_ars": 40000
   },
   {
     "id": "deck_valencia",
     "name": "Deck Valencia",
     "category": "PISOTAK",
     "costo_m2": 17.42,
-    "img": "images/deck_valencia.jpg"
+    "img": "images/deck_valencia.jpg",
+    "precio_ars": 38000
   },
   {
     "id": "deck_madri",
-    "name": "Deck Madri",
+    "name": "Deck Madrid",
     "category": "PISOTAK",
     "costo_m2": 17.42,
-    "img": "images/deck_madri.jpg"
+    "img": "images/deck_madri.jpg",
+    "precio_ars": 38000
   },
   {
     "id": "kroma_avila",
-    "name": "Kroma Wood Ávila",
+    "name": "Kroma Madera Ávila",
     "category": "KROMA",
     "costo_m2": 14.32,
-    "img": "images/kroma_avila.jpg"
+    "img": "images/kroma_avila.jpg",
+    "precio_ars": 32000
   },
   {
     "id": "kroma_lerida",
-    "name": "Kroma Wood Lérida",
+    "name": "Kroma Madera Lérida",
     "category": "KROMA",
     "costo_m2": 14.32,
-    "img": "images/kroma_lerida.jpg"
+    "img": "images/kroma_lerida.jpg",
+    "precio_ars": 32000
   },
   {
     "id": "kroma_segovia",
-    "name": "Kroma Wood Segovia",
+    "name": "Kroma Madera Segovia",
     "category": "KROMA",
     "costo_m2": 14.32,
-    "img": "images/kroma_segovia.jpg"
+    "img": "images/kroma_segovia.jpg",
+    "precio_ars": 32000
   },
   {
     "id": "kroma_bilbao",
-    "name": "Kroma Wood Bilbao",
+    "name": "Kroma Madera Bilbao",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_bilbao.jpg"
+    "img": "images/kroma_bilbao.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_teruel",
-    "name": "Kroma Wood Teruel",
+    "name": "Kroma Madera Teruel",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_teruel.jpg"
+    "img": "images/kroma_teruel.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_branco_artico",
-    "name": "Kroma Branco Ártico",
+    "name": "Kroma Blanco Ártico",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_branco_artico.jpg"
+    "img": "images/kroma_branco_artico.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_cinza_fossil",
-    "name": "Kroma Cinza Fossil",
+    "name": "Kroma Gris Fossil",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_cinza_fossil.jpg"
+    "img": "images/kroma_cinza_fossil.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_preto_absoluto",
-    "name": "Kroma Preto Absoluto",
+    "name": "Kroma Negro Absoluto",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_preto_absoluto.jpg"
+    "img": "images/kroma_preto_absoluto.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_argento",
-    "name": "Kroma Argento",
+    "name": "Kroma Plateado",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_argento.jpg"
+    "img": "images/kroma_argento.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_azul_petroleo",
     "name": "Kroma Azul Petróleo",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_azul_petroleo.jpg"
+    "img": "images/kroma_azul_petroleo.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_verde_primavera",
     "name": "Kroma Verde Primavera",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_verde_primavera.jpg"
+    "img": "images/kroma_verde_primavera.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_grafite",
-    "name": "Kroma Grafite",
+    "name": "Kroma Grafito",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_grafite.jpg"
+    "img": "images/kroma_grafite.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_aveia",
-    "name": "Kroma Aveia",
+    "name": "Kroma Avena",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_aveia.jpg"
+    "img": "images/kroma_aveia.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_fendi",
     "name": "Kroma Fendi",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_fendi.jpg"
+    "img": "images/kroma_fendi.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_gamboge",
     "name": "Kroma Gamboge",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_gamboge.jpg"
+    "img": "images/kroma_gamboge.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_olaria",
-    "name": "Kroma Olaria",
+    "name": "Kroma Alfarería",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_olaria.jpg"
+    "img": "images/kroma_olaria.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_merlot",
     "name": "Kroma Merlot",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_merlot.jpg"
+    "img": "images/kroma_merlot.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_verde_oliva",
     "name": "Kroma Verde Oliva",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_verde_oliva.jpg"
+    "img": "images/kroma_verde_oliva.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_falesia",
-    "name": "Kroma Falésia",
+    "name": "Kroma Acantilado",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_falesia.jpg"
+    "img": "images/kroma_falesia.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_avorio",
-    "name": "Kroma Avorio",
+    "name": "Kroma Marfil",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_avorio.jpg"
+    "img": "images/kroma_avorio.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_rattan",
-    "name": "Kroma Rattan Off White",
+    "name": "Kroma Ratán Off White",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_rattan.jpg"
+    "img": "images/kroma_rattan.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_cuoro",
-    "name": "Kroma Cuoro Off White",
+    "name": "Kroma Cuero Off White",
     "category": "KROMA",
     "costo_m2": 13.23,
-    "img": "images/kroma_cuoro.jpg"
+    "img": "images/kroma_cuoro.jpg",
+    "precio_ars": 29000
   },
   {
     "id": "kroma_malbec",
     "name": "Kroma Malbec",
     "category": "KROMA",
     "costo_m2": 14.69,
-    "img": "images/kroma_malbec.jpg"
+    "img": "images/kroma_malbec.jpg",
+    "precio_ars": 32000
   }
 ]

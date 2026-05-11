@@ -36,7 +36,7 @@
   header {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    padding: 28px 40px;
+    padding: 20px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,27 +48,20 @@
   .logo {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
   }
   .logo-img {
-    height: 42px;
+    height: 40px;
     width: auto;
     display: block;
   }
-  .logo h1 {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    font-weight: 300;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text);
-  }
-  .logo h1 span { color: var(--gold); font-weight: 600; }
   .tagline {
-    font-size: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
     color: var(--text-muted);
-    letter-spacing: 0.12em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    font-weight: 400;
   }
 
   /* HERO */
@@ -80,16 +73,19 @@
   }
   .hero h2 {
     font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    font-weight: 200;
-    letter-spacing: 0.08em;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    line-height: 1.1;
   }
-  .hero h2 span { color: var(--gold); font-weight: 500; }
+  .hero h2 span { color: var(--gold); }
   .hero p {
+    font-family: var(--font-body);
     color: var(--text-muted);
     font-size: 1rem;
+    font-weight: 300;
     max-width: 520px;
     margin: 0 auto 36px;
     line-height: 1.7;
@@ -103,21 +99,25 @@
   .stat { text-align: center; }
   .stat-num {
     font-family: var(--font-heading);
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 2.2rem;
+    font-weight: 600;
     color: var(--gold);
     display: block;
+    line-height: 1;
   }
   .stat-label {
-    font-size: 0.72rem;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
+    margin-top: 4px;
+    display: block;
   }
 
   /* CONTROLS */
   .controls {
-    padding: 28px 40px;
+    padding: 24px 40px;
     display: flex;
     gap: 16px;
     align-items: center;
@@ -138,6 +138,7 @@
     color: var(--text);
     padding: 10px 16px 10px 40px;
     border-radius: 8px;
+    font-family: var(--font-body);
     font-size: 0.9rem;
     outline: none;
     transition: border-color .2s;
@@ -164,23 +165,26 @@
     color: var(--text-muted);
     padding: 8px 18px;
     border-radius: 100px;
-    font-size: 0.82rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all .2s;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
   .filter-btn:hover { border-color: var(--gold); color: var(--text); }
-  .filter-btn.active { background: var(--gold); border-color: var(--gold); color: #000000; font-weight: 700; }
+  .filter-btn.active { background: var(--gold); border-color: var(--gold); color: #000; font-weight: 700; }
 
   /* RESULTS BAR */
   .results-bar {
     padding: 14px 40px;
+    font-family: var(--font-body);
     font-size: 0.82rem;
     color: var(--text-muted);
     letter-spacing: 0.05em;
   }
-  .results-bar span { color: var(--gold); }
+  .results-bar span { color: var(--gold); font-weight: 600; }
 
   /* GRID */
   .grid {
@@ -202,7 +206,7 @@
   .card:hover {
     transform: translateY(-4px);
     border-color: var(--gold);
-    box-shadow: 0 12px 40px rgba(255,210,0,.12);
+    box-shadow: 0 12px 40px rgba(255,210,0,.10);
   }
   .card.hidden { display: none; }
 
@@ -223,35 +227,38 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    background: rgba(10,10,10,.75);
+    background: rgba(10,10,10,.80);
     backdrop-filter: blur(6px);
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255,210,0,.25);
     color: var(--gold);
-    font-size: 0.65rem;
+    font-family: var(--font-body);
+    font-size: 0.62rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     padding: 4px 10px;
     border-radius: 100px;
+    font-weight: 600;
   }
 
-  .card-body {
-    padding: 16px 18px;
-  }
+  .card-body { padding: 14px 16px 16px; }
   .card-body h3 {
-    font-size: 0.92rem;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
     font-weight: 400;
-    letter-spacing: 0.03em;
-    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
     color: var(--text);
-    line-height: 1.4;
+    line-height: 1.3;
   }
   .price {
-    font-size: 1.1rem;
-    font-weight: 300;
-    color: var(--gold-light);
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--gold);
   }
   .price span {
-    font-size: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
     color: var(--text-muted);
     font-weight: 400;
   }
@@ -262,15 +269,16 @@
     text-align: center;
     padding: 80px 20px;
     color: var(--text-muted);
+    font-family: var(--font-body);
   }
   .empty.show { display: block; }
-  .empty svg { opacity: .2; margin-bottom: 16px; }
 
   /* FOOTER */
   footer {
     text-align: center;
     padding: 30px 40px;
     border-top: 1px solid var(--border);
+    font-family: var(--font-body);
     font-size: 0.75rem;
     color: var(--text-muted);
     letter-spacing: 0.08em;
@@ -284,7 +292,7 @@
     .hero { padding: 40px 16px 32px; }
     .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
     .stats { gap: 24px; }
-    .logo h1 { font-size: 1rem; }
+    .tagline { display: none; }
   }
 </style>
 </head>
@@ -327,840 +335,77 @@
   Mostrando <span id="count">79</span> productos
 </div>
 
-<div class="grid" id="grid">
-
-    <div class="card" data-cat="CRYSTAL">
-      <div class="card-img">
-        <img src="images/crystal_jateado.jpg" alt="Crystal Jateado" loading="lazy">
-        <span class="cat-badge">Crystal</span>
-      </div>
-      <div class="card-body">
-        <h3>Crystal Jateado</h3>
-        <div class="price">USD 6.11 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="CRYSTAL">
-      <div class="card-img">
-        <img src="images/crystal_quadra.jpg" alt="Crystal Quadra" loading="lazy">
-        <span class="cat-badge">Crystal</span>
-      </div>
-      <div class="card-body">
-        <h3>Crystal Quadra</h3>
-        <div class="price">USD 7.42 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="CRYSTAL">
-      <div class="card-img">
-        <img src="images/crystal_condessa.jpg" alt="Crystal Condessa" loading="lazy">
-        <span class="cat-badge">Crystal</span>
-      </div>
-      <div class="card-body">
-        <h3>Crystal Condessa</h3>
-        <div class="price">USD 7.42 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="CRYSTAL">
-      <div class="card-img">
-        <img src="images/crystal_carbonium.jpg" alt="Crystal Carbonium" loading="lazy">
-        <span class="cat-badge">Crystal</span>
-      </div>
-      <div class="card-body">
-        <h3>Crystal Carbonium</h3>
-        <div class="price">USD 7.42 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="CRYSTAL">
-      <div class="card-img">
-        <img src="images/crystal_krusher.jpg" alt="Crystal Krusher" loading="lazy">
-        <span class="cat-badge">Crystal</span>
-      </div>
-      <div class="card-body">
-        <h3>Crystal Krusher</h3>
-        <div class="price">USD 7.42 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="CRYSTAL">
-      <div class="card-img">
-        <img src="images/crystal_rave.jpg" alt="Crystal Rave" loading="lazy">
-        <span class="cat-badge">Crystal</span>
-      </div>
-      <div class="card-body">
-        <h3>Crystal Rave</h3>
-        <div class="price">USD 7.42 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="CRYSTAL">
-      <div class="card-img">
-        <img src="images/crystal_tropical.jpg" alt="Crystal Tropical Garden" loading="lazy">
-        <span class="cat-badge">Crystal</span>
-      </div>
-      <div class="card-body">
-        <h3>Crystal Tropical Garden</h3>
-        <div class="price">USD 8.84 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_burl.jpg" alt="Wood Burl" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Burl</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_capuccino.jpg" alt="Wood Carvalho Capuccino" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Carvalho Capuccino</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_inovata.jpg" alt="Wood Carvalho Inovata" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Carvalho Inovata</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_verona.jpg" alt="Wood Carvalho Verona" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Carvalho Verona</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_sevilla.jpg" alt="Wood Demolição Sevilla" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Demolição Sevilla</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_salamanca.jpg" alt="Wood Rústica Salamanca" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Rústica Salamanca</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_cadiz.jpg" alt="Wood Rústica Cádiz" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Rústica Cádiz</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_barcelona.jpg" alt="Wood Demolição Barcelona" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Demolição Barcelona</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_pamplona.jpg" alt="Wood Carvalho Pamplona" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Carvalho Pamplona</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_tenerife.jpg" alt="Wood Carvalho Tenerife" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Carvalho Tenerife</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_vigo.jpg" alt="Wood Ripado Vigo" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Ripado Vigo</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_lugo.jpg" alt="Wood Ripado Lugo" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Ripado Lugo</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_burgo.jpg" alt="Wood Ripado Burgo" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Ripado Burgo</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_galicia.jpg" alt="Wood Freijo Galicia" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Freijo Galicia</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_asturias.jpg" alt="Wood Freijo Asturias" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Freijo Asturias</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="WOOD">
-      <div class="card-img">
-        <img src="images/wood_toledo.jpg" alt="Wood Freijo Toledo" loading="lazy">
-        <span class="cat-badge">Wood</span>
-      </div>
-      <div class="card-body">
-        <h3>Wood Freijo Toledo</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="ESTAMPADOS">
-      <div class="card-img">
-        <img src="images/lisboa.jpg" alt="Lisboa" loading="lazy">
-        <span class="cat-badge">Estampados</span>
-      </div>
-      <div class="card-body">
-        <h3>Lisboa</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="ESTAMPADOS">
-      <div class="card-img">
-        <img src="images/porto.jpg" alt="Porto" loading="lazy">
-        <span class="cat-badge">Estampados</span>
-      </div>
-      <div class="card-body">
-        <h3>Porto</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="ESTAMPADOS">
-      <div class="card-img">
-        <img src="images/metro_matte.jpg" alt="Metro White Matte" loading="lazy">
-        <span class="cat-badge">Estampados</span>
-      </div>
-      <div class="card-body">
-        <h3>Metro White Matte</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="ESTAMPADOS">
-      <div class="card-img">
-        <img src="images/metro_gloss.jpg" alt="Metro White Gloss" loading="lazy">
-        <span class="cat-badge">Estampados</span>
-      </div>
-      <div class="card-body">
-        <h3>Metro White Gloss</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="ESTAMPADOS">
-      <div class="card-img">
-        <img src="images/rhapsody.jpg" alt="Rhapsody" loading="lazy">
-        <span class="cat-badge">Estampados</span>
-      </div>
-      <div class="card-body">
-        <h3>Rhapsody</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="ESTAMPADOS">
-      <div class="card-img">
-        <img src="images/jardim_vertical.jpg" alt="Jardim Vertical" loading="lazy">
-        <span class="cat-badge">Estampados</span>
-      </div>
-      <div class="card-body">
-        <h3>Jardim Vertical</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="ESTAMPADOS">
-      <div class="card-img">
-        <img src="images/jardim_tropical.jpg" alt="Jardim Tropical" loading="lazy">
-        <span class="cat-badge">Estampados</span>
-      </div>
-      <div class="card-body">
-        <h3>Jardim Tropical</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/brick_white.jpg" alt="Brick White" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Brick White</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/brick_red.jpg" alt="Brick Red" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Brick Red</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/brick_black.jpg" alt="Brick Black" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Brick Black</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/brick_london.jpg" alt="English Brick London" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>English Brick London</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/concrete.jpg" alt="Concrete" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Concrete</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_nero.jpg" alt="Marble Nero" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Nero</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_bianco.jpg" alt="Marble Bianco" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Bianco</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_lunare_matte.jpg" alt="Marble Lunare Matte" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Lunare Matte</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_lunare_gloss.jpg" alt="Marble Lunare Gloss" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Lunare Gloss</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_marquina_gloss.jpg" alt="Marble Marquina Gloss" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Marquina Gloss</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_marquina_matte.jpg" alt="Marble Marquina Matte" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Marquina Matte</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_calacatta_gloss.jpg" alt="Marble Calacatta Oro Gloss" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Calacatta Oro Gloss</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_calacatta_matte.jpg" alt="Marble Calacatta Oro Matte" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Calacatta Oro Matte</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_crema_gloss.jpg" alt="Marble Crema Marfil Gloss" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Crema Marfil Gloss</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_crema_matte.jpg" alt="Marble Crema Marfil Matte" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Crema Marfil Matte</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_grigio_gloss.jpg" alt="Marble Grigio Gloss" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Grigio Gloss</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_grigio_matte.jpg" alt="Marble Grigio Matte" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Grigio Matte</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/marble_tivoli.jpg" alt="Marble Tivoli" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Marble Tivoli</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/lombarda_cenere_gloss.jpg" alt="Lombarda Cenere Gloss" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Lombarda Cenere Gloss</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/lombarda_cenere_matte.jpg" alt="Lombarda Cenere Matte" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Lombarda Cenere Matte</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/lombarda_sabbia_gloss.jpg" alt="Lombarda Sabbia Gloss" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Lombarda Sabbia Gloss</h3>
-        <div class="price">USD 15.90 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/lombarda_sabbia_matte.jpg" alt="Lombarda Sabbia Matte" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Lombarda Sabbia Matte</h3>
-        <div class="price">USD 15.57 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/tramatto_beige.jpg" alt="Tramatto Beige" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Tramatto Beige</h3>
-        <div class="price">USD 17.94 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PEDRAS">
-      <div class="card-img">
-        <img src="images/tramatto_gris.jpg" alt="Tramatto Gris" loading="lazy">
-        <span class="cat-badge">Mármoles & Piedras</span>
-      </div>
-      <div class="card-body">
-        <h3>Tramatto Gris</h3>
-        <div class="price">USD 17.94 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PISOTAK">
-      <div class="card-img">
-        <img src="images/deck_valencia.jpg" alt="Deck Valencia" loading="lazy">
-        <span class="cat-badge">Pisotak</span>
-      </div>
-      <div class="card-body">
-        <h3>Deck Valencia</h3>
-        <div class="price">USD 17.42 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="PISOTAK">
-      <div class="card-img">
-        <img src="images/deck_madri.jpg" alt="Deck Madri" loading="lazy">
-        <span class="cat-badge">Pisotak</span>
-      </div>
-      <div class="card-body">
-        <h3>Deck Madri</h3>
-        <div class="price">USD 17.42 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_avila.jpg" alt="Kroma Wood Ávila" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Wood Ávila</h3>
-        <div class="price">USD 14.32 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_lerida.jpg" alt="Kroma Wood Lérida" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Wood Lérida</h3>
-        <div class="price">USD 14.32 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_segovia.jpg" alt="Kroma Wood Segovia" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Wood Segovia</h3>
-        <div class="price">USD 14.32 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_bilbao.jpg" alt="Kroma Wood Bilbao" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Wood Bilbao</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_teruel.jpg" alt="Kroma Wood Teruel" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Wood Teruel</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_branco_artico.jpg" alt="Kroma Branco Ártico" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Branco Ártico</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_cinza_fossil.jpg" alt="Kroma Cinza Fossil" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Cinza Fossil</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_preto_absoluto.jpg" alt="Kroma Preto Absoluto" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Preto Absoluto</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_argento.jpg" alt="Kroma Argento" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Argento</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_azul_petroleo.jpg" alt="Kroma Azul Petróleo" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Azul Petróleo</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_verde_primavera.jpg" alt="Kroma Verde Primavera" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Verde Primavera</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_grafite.jpg" alt="Kroma Grafite" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Grafite</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_aveia.jpg" alt="Kroma Aveia" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Aveia</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_fendi.jpg" alt="Kroma Fendi" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Fendi</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_gamboge.jpg" alt="Kroma Gamboge" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Gamboge</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_olaria.jpg" alt="Kroma Olaria" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Olaria</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_merlot.jpg" alt="Kroma Merlot" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Merlot</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_verde_oliva.jpg" alt="Kroma Verde Oliva" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Verde Oliva</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_falesia.jpg" alt="Kroma Falésia" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Falésia</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_avorio.jpg" alt="Kroma Avorio" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Avorio</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_rattan.jpg" alt="Kroma Rattan Off White" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Rattan Off White</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_cuoro.jpg" alt="Kroma Cuoro Off White" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Cuoro Off White</h3>
-        <div class="price">USD 13.23 <span>/ m²</span></div>
-      </div>
-    </div>
-    <div class="card" data-cat="KROMA">
-      <div class="card-img">
-        <img src="images/kroma_malbec.jpg" alt="Kroma Malbec" loading="lazy">
-        <span class="cat-badge">Kroma</span>
-      </div>
-      <div class="card-body">
-        <h3>Kroma Malbec</h3>
-        <div class="price">USD 14.69 <span>/ m²</span></div>
-      </div>
-    </div>
-</div>
-
-<div class="empty" id="empty">
-  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-  <p>No se encontraron productos</p>
-</div>
+<div class="grid" id="grid"></div>
+<div class="empty" id="empty">Sin resultados para tu búsqueda</div>
 
 <footer>
   © CoverAll Deco — Renovación interior sin obra · <a href="https://coveralldeco.com">coveralldeco.com</a>
 </footer>
 
 <script>
-  const cards = document.querySelectorAll('.card');
-  const searchEl = document.getElementById('search');
-  const countEl = document.getElementById('count');
-  const emptyEl = document.getElementById('empty');
-  let activeCat = 'ALL';
+const PRODUCTS = [{"id": "crystal_jateado", "name": "Crystal Esmerilado", "category": "CRYSTAL", "costo_m2": 6.11, "img": "images/crystal_jateado.jpg", "precio_ars": 13000}, {"id": "crystal_quadra", "name": "Crystal Cuadros", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_quadra.jpg", "precio_ars": 16000}, {"id": "crystal_condessa", "name": "Crystal Condesa", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_condessa.jpg", "precio_ars": 16000}, {"id": "crystal_carbonium", "name": "Crystal Carbonio", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_carbonium.jpg", "precio_ars": 16000}, {"id": "crystal_krusher", "name": "Crystal Krusher", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_krusher.jpg", "precio_ars": 16000}, {"id": "crystal_rave", "name": "Crystal Rave", "category": "CRYSTAL", "costo_m2": 7.42, "img": "images/crystal_rave.jpg", "precio_ars": 16000}, {"id": "crystal_tropical", "name": "Crystal Jardín Tropical", "category": "CRYSTAL", "costo_m2": 8.84, "img": "images/crystal_tropical.jpg", "precio_ars": 19000}, {"id": "wood_burl", "name": "Wood Burl", "category": "WOOD", "costo_m2": 15.9, "img": "images/wood_burl.jpg", "precio_ars": 35000}, {"id": "wood_capuccino", "name": "Wood Roble Capuccino", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_capuccino.jpg", "precio_ars": 34000}, {"id": "wood_inovata", "name": "Wood Roble Inovata", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_inovata.jpg", "precio_ars": 34000}, {"id": "wood_verona", "name": "Wood Roble Verona", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_verona.jpg", "precio_ars": 34000}, {"id": "wood_sevilla", "name": "Wood Demolición Sevilla", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_sevilla.jpg", "precio_ars": 34000}, {"id": "wood_salamanca", "name": "Wood Rústica Salamanca", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_salamanca.jpg", "precio_ars": 34000}, {"id": "wood_cadiz", "name": "Wood Rústica Cádiz", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_cadiz.jpg", "precio_ars": 34000}, {"id": "wood_barcelona", "name": "Wood Demolición Barcelona", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_barcelona.jpg", "precio_ars": 34000}, {"id": "wood_pamplona", "name": "Wood Roble Pamplona", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_pamplona.jpg", "precio_ars": 34000}, {"id": "wood_tenerife", "name": "Wood Roble Tenerife", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_tenerife.jpg", "precio_ars": 34000}, {"id": "wood_vigo", "name": "Wood Listones Vigo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_vigo.jpg", "precio_ars": 34000}, {"id": "wood_lugo", "name": "Wood Listones Lugo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_lugo.jpg", "precio_ars": 34000}, {"id": "wood_burgo", "name": "Wood Listones Burgo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_burgo.jpg", "precio_ars": 34000}, {"id": "wood_galicia", "name": "Wood Fresno Galicia", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_galicia.jpg", "precio_ars": 34000}, {"id": "wood_asturias", "name": "Wood Fresno Asturias", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_asturias.jpg", "precio_ars": 34000}, {"id": "wood_toledo", "name": "Wood Fresno Toledo", "category": "WOOD", "costo_m2": 15.57, "img": "images/wood_toledo.jpg", "precio_ars": 34000}, {"id": "lisboa", "name": "Lisboa", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/lisboa.jpg", "precio_ars": 34000}, {"id": "porto", "name": "Porto", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/porto.jpg", "precio_ars": 34000}, {"id": "metro_matte", "name": "Metro Blanco Mate", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/metro_matte.jpg", "precio_ars": 34000}, {"id": "metro_gloss", "name": "Metro Blanco Brillante", "category": "ESTAMPADOS", "costo_m2": 15.9, "img": "images/metro_gloss.jpg", "precio_ars": 35000}, {"id": "rhapsody", "name": "Rhapsody", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/rhapsody.jpg", "precio_ars": 34000}, {"id": "jardim_vertical", "name": "Jardín Vertical", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/jardim_vertical.jpg", "precio_ars": 34000}, {"id": "jardim_tropical", "name": "Jardín Tropical", "category": "ESTAMPADOS", "costo_m2": 15.57, "img": "images/jardim_tropical.jpg", "precio_ars": 34000}, {"id": "brick_white", "name": "Ladrillo Blanco", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_white.jpg", "precio_ars": 34000}, {"id": "brick_red", "name": "Ladrillo Rojo", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_red.jpg", "precio_ars": 34000}, {"id": "brick_black", "name": "Ladrillo Negro", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_black.jpg", "precio_ars": 34000}, {"id": "brick_london", "name": "Ladrillo Inglés London", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/brick_london.jpg", "precio_ars": 34000}, {"id": "concrete", "name": "Concreto", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/concrete.jpg", "precio_ars": 34000}, {"id": "marble_nero", "name": "Mármol Negro", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_nero.jpg", "precio_ars": 35000}, {"id": "marble_bianco", "name": "Mármol Blanco", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_bianco.jpg", "precio_ars": 35000}, {"id": "marble_lunare_matte", "name": "Mármol Lunar Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_lunare_matte.jpg", "precio_ars": 34000}, {"id": "marble_lunare_gloss", "name": "Mármol Lunar Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_lunare_gloss.jpg", "precio_ars": 35000}, {"id": "marble_marquina_gloss", "name": "Mármol Marquina Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_marquina_gloss.jpg", "precio_ars": 35000}, {"id": "marble_marquina_matte", "name": "Mármol Marquina Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_marquina_matte.jpg", "precio_ars": 34000}, {"id": "marble_calacatta_gloss", "name": "Mármol Calacatta Oro Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_calacatta_gloss.jpg", "precio_ars": 35000}, {"id": "marble_calacatta_matte", "name": "Mármol Calacatta Oro Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_calacatta_matte.jpg", "precio_ars": 34000}, {"id": "marble_crema_gloss", "name": "Mármol Crema Marfil Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_crema_gloss.jpg", "precio_ars": 35000}, {"id": "marble_crema_matte", "name": "Mármol Crema Marfil Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_crema_matte.jpg", "precio_ars": 34000}, {"id": "marble_grigio_gloss", "name": "Mármol Gris Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/marble_grigio_gloss.jpg", "precio_ars": 35000}, {"id": "marble_grigio_matte", "name": "Mármol Gris Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_grigio_matte.jpg", "precio_ars": 34000}, {"id": "marble_tivoli", "name": "Mármol Tivoli", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/marble_tivoli.jpg", "precio_ars": 34000}, {"id": "lombarda_cenere_gloss", "name": "Lombarda Ceniza Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/lombarda_cenere_gloss.jpg", "precio_ars": 35000}, {"id": "lombarda_cenere_matte", "name": "Lombarda Ceniza Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/lombarda_cenere_matte.jpg", "precio_ars": 34000}, {"id": "lombarda_sabbia_gloss", "name": "Lombarda Arena Brillante", "category": "PEDRAS", "costo_m2": 15.9, "img": "images/lombarda_sabbia_gloss.jpg", "precio_ars": 35000}, {"id": "lombarda_sabbia_matte", "name": "Lombarda Arena Mate", "category": "PEDRAS", "costo_m2": 15.57, "img": "images/lombarda_sabbia_matte.jpg", "precio_ars": 34000}, {"id": "tramatto_beige", "name": "Tramatto Beige", "category": "PEDRAS", "costo_m2": 17.94, "img": "images/tramatto_beige.jpg", "precio_ars": 40000}, {"id": "tramatto_gris", "name": "Tramatto Gris", "category": "PEDRAS", "costo_m2": 17.94, "img": "images/tramatto_gris.jpg", "precio_ars": 40000}, {"id": "deck_valencia", "name": "Deck Valencia", "category": "PISOTAK", "costo_m2": 17.42, "img": "images/deck_valencia.jpg", "precio_ars": 38000}, {"id": "deck_madri", "name": "Deck Madrid", "category": "PISOTAK", "costo_m2": 17.42, "img": "images/deck_madri.jpg", "precio_ars": 38000}, {"id": "kroma_avila", "name": "Kroma Madera Ávila", "category": "KROMA", "costo_m2": 14.32, "img": "images/kroma_avila.jpg", "precio_ars": 32000}, {"id": "kroma_lerida", "name": "Kroma Madera Lérida", "category": "KROMA", "costo_m2": 14.32, "img": "images/kroma_lerida.jpg", "precio_ars": 32000}, {"id": "kroma_segovia", "name": "Kroma Madera Segovia", "category": "KROMA", "costo_m2": 14.32, "img": "images/kroma_segovia.jpg", "precio_ars": 32000}, {"id": "kroma_bilbao", "name": "Kroma Madera Bilbao", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_bilbao.jpg", "precio_ars": 29000}, {"id": "kroma_teruel", "name": "Kroma Madera Teruel", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_teruel.jpg", "precio_ars": 29000}, {"id": "kroma_branco_artico", "name": "Kroma Blanco Ártico", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_branco_artico.jpg", "precio_ars": 29000}, {"id": "kroma_cinza_fossil", "name": "Kroma Gris Fossil", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_cinza_fossil.jpg", "precio_ars": 29000}, {"id": "kroma_preto_absoluto", "name": "Kroma Negro Absoluto", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_preto_absoluto.jpg", "precio_ars": 29000}, {"id": "kroma_argento", "name": "Kroma Plateado", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_argento.jpg", "precio_ars": 29000}, {"id": "kroma_azul_petroleo", "name": "Kroma Azul Petróleo", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_azul_petroleo.jpg", "precio_ars": 29000}, {"id": "kroma_verde_primavera", "name": "Kroma Verde Primavera", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_verde_primavera.jpg", "precio_ars": 29000}, {"id": "kroma_grafite", "name": "Kroma Grafito", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_grafite.jpg", "precio_ars": 29000}, {"id": "kroma_aveia", "name": "Kroma Avena", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_aveia.jpg", "precio_ars": 29000}, {"id": "kroma_fendi", "name": "Kroma Fendi", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_fendi.jpg", "precio_ars": 29000}, {"id": "kroma_gamboge", "name": "Kroma Gamboge", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_gamboge.jpg", "precio_ars": 29000}, {"id": "kroma_olaria", "name": "Kroma Alfarería", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_olaria.jpg", "precio_ars": 29000}, {"id": "kroma_merlot", "name": "Kroma Merlot", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_merlot.jpg", "precio_ars": 29000}, {"id": "kroma_verde_oliva", "name": "Kroma Verde Oliva", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_verde_oliva.jpg", "precio_ars": 29000}, {"id": "kroma_falesia", "name": "Kroma Acantilado", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_falesia.jpg", "precio_ars": 29000}, {"id": "kroma_avorio", "name": "Kroma Marfil", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_avorio.jpg", "precio_ars": 29000}, {"id": "kroma_rattan", "name": "Kroma Ratán Off White", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_rattan.jpg", "precio_ars": 29000}, {"id": "kroma_cuoro", "name": "Kroma Cuero Off White", "category": "KROMA", "costo_m2": 13.23, "img": "images/kroma_cuoro.jpg", "precio_ars": 29000}, {"id": "kroma_malbec", "name": "Kroma Malbec", "category": "KROMA", "costo_m2": 14.69, "img": "images/kroma_malbec.jpg", "precio_ars": 32000}];
 
-  function filter() {
-    const q = searchEl.value.toLowerCase().trim();
-    let visible = 0;
-    cards.forEach(c => {
-      const catMatch = activeCat === 'ALL' || c.dataset.cat === activeCat;
-      const name = c.querySelector('h3').textContent.toLowerCase();
-      const textMatch = !q || name.includes(q);
-      if (catMatch && textMatch) { c.classList.remove('hidden'); visible++; }
-      else c.classList.add('hidden');
-    });
-    countEl.textContent = visible;
-    emptyEl.classList.toggle('show', visible === 0);
+const CAT_LABELS = {
+  CRYSTAL: 'Crystal', WOOD: 'Wood', ESTAMPADOS: 'Estampados',
+  PEDRAS: 'Mármoles', PISOTAK: 'Pisotak', KROMA: 'Kroma'
+};
+
+function formatARS(n) {
+  return '$\u202F' + n.toLocaleString('es-AR');
+}
+
+function renderCards(list) {
+  const grid = document.getElementById('grid');
+  const empty = document.getElementById('empty');
+  document.getElementById('count').textContent = list.length;
+  if (list.length === 0) {
+    grid.innerHTML = '';
+    empty.classList.add('show');
+    return;
   }
+  empty.classList.remove('show');
+  grid.innerHTML = list.map(p => `
+    <div class="card" data-cat="${p.category}">
+      <div class="card-img">
+        <img src="${p.img}" alt="${p.name}" loading="lazy">
+        <span class="cat-badge">${CAT_LABELS[p.category] || p.category}</span>
+      </div>
+      <div class="card-body">
+        <h3>${p.name}</h3>
+        <div class="price">${formatARS(p.precio_ars)} <span>/ m²</span></div>
+      </div>
+    </div>
+  `).join('');
+}
 
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeCat = btn.dataset.cat;
-      filter();
-    });
+let currentCat = 'ALL';
+let currentSearch = '';
+
+function applyFilters() {
+  let list = PRODUCTS;
+  if (currentCat !== 'ALL') list = list.filter(p => p.category === currentCat);
+  if (currentSearch) {
+    const q = currentSearch.toLowerCase();
+    list = list.filter(p => p.name.toLowerCase().includes(q));
+  }
+  renderCards(list);
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCat = btn.dataset.cat;
+    applyFilters();
   });
+});
 
-  searchEl.addEventListener('input', filter);
+document.getElementById('search').addEventListener('input', e => {
+  currentSearch = e.target.value.trim();
+  applyFilters();
+});
+
+applyFilters();
 </script>
 </body>
 </html>
